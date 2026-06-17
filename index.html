@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>魏际强 · 企业消防安全顾问 — 17年实战派专家</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:#e8eaf0;color:#1a1a2e;line-height:1.65;overflow-x:hidden}
+  a{text-decoration:none;color:inherit}
+
+  /* ── 导航 ── */
+  .navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 48px;background:#fff;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+  .brand img{height:32px;width:auto;vertical-align:middle}
+  .nav-phone{display:inline-flex;align-items:center;gap:8px;background:#c62828;color:#fff;padding:8px 18px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:background .2s}
+  .nav-phone:hover{background:#b71c1c}
+  .nav-tools{display:flex;gap:6px}
+  .nav-tool-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#c62828;border:1.5px solid rgba(198,40,40,0.4);padding:7px 16px;border-radius:50px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+  .nav-tool-btn:hover{background:#c62828;color:#fff;border-color:#c62828}
+
+  /* ── 封面 ── */
+  .hero{display:grid;grid-template-columns:1fr 320px;min-height:520px;background:#fff;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;right:-40px;top:-40px;width:420px;height:420px;background:radial-gradient(circle,rgba(198,40,40,0.1) 0%,transparent 70%);pointer-events:none}
+  .hero-left{padding:44px 44px 48px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+  .hero-badge{display:inline-block;background:rgba(198,40,40,0.1);border:1px solid rgba(198,40,40,0.3);color:#c62828;font-size:13px;padding:4px 14px;border-radius:50px;margin-bottom:14px;letter-spacing:.5px;width:fit-content;font-weight:600}
+  .hero-title{font-size:clamp(26px,4.5vw,40px);font-weight:900;line-height:1.2;margin-bottom:14px;color:#111}
+  .hero-title .accent{color:#c62828}
+  .hero-sub{font-size:16px;color:#444;line-height:1.75;margin-bottom:22px;max-width:500px}
+  .hero-sub strong{color:#111;font-weight:700}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .hero-cta{display:inline-flex;align-items:center;gap:8px;background:#c62828;color:#fff;padding:12px 26px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:all .2s}
+  .hero-cta:hover{background:#b71c1c;transform:translateY(-2px);box-shadow:0 6px 24px rgba(198,40,40,0.3)}
+  .hero-cta.outline{border:1.5px solid rgba(198,40,40,0.4);background:transparent;color:#c62828;box-shadow:none}
+  .hero-cta.outline:hover{background:rgba(198,40,40,0.06);transform:none}
+  .hero-right{background:linear-gradient(160deg,#fff5f5 0%,#fff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;gap:10px;border-left:1px solid rgba(0,0,0,0.06);position:relative;z-index:1}
+  .hero-avatar{width:100px;height:100px;border-radius:50%;border:4px solid rgba(198,40,40,0.2);overflow:hidden;box-shadow:0 4px 20px rgba(198,40,40,0.15)}
+  .hero-avatar img{width:100%;height:100%;object-fit:cover}
+  .hero-name{font-size:17px;font-weight:800;text-align:center;color:#111}
+  .hero-name-sub{font-size:12px;color:#c62828;text-align:center;font-weight:600}
+  .hero-exp-row{display:flex;gap:8px;width:100%}
+  .hero-exp-item{flex:1;background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+  .hero-exp-num{font-size:22px;font-weight:900;color:#c62828;line-height:1}
+  .hero-exp-label{font-size:10px;color:#888;margin-top:3px;line-height:1.3}
+  .hero-contact{text-align:center;margin-top:2px}
+  .hero-contact div{font-size:12px;color:#888}
+
+  /* ── 统计条 ── */
+  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:#c62828}
+  .stat-item{text-align:center;padding:18px 10px;border-right:1px solid rgba(255,255,255,0.2)}
+  .stat-item:last-child{border-right:none}
+  .stat-num{font-size:24px;font-weight:900;color:#fff;line-height:1}
+  .stat-label{font-size:12px;color:rgba(255,255,255,0.75);margin-top:3px}
+
+  /* ── 通用区块 ── */
+  .section{padding:48px 48px;background:#fff;border-top:1px solid rgba(0,0,0,0.05)}
+  .section-alt{background:#f5f6fa}
+  .section-tag{font-size:11px;color:#c62828;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+  .section-title{font-size:clamp(20px,3.5vw,27px);font-weight:900;margin-bottom:6px;color:#111}
+  .section-title .accent{color:#c62828}
+  .section-sub{font-size:14px;color:#666;margin-bottom:24px}
+  .divider{width:46px;height:4px;background:linear-gradient(90deg,#c62828,#e53935);border-radius:2px;margin-bottom:24px}
+
+  /* ── 经历自述 ── */
+  .cred-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px}
+  .cred-card{background:#f5f6fa;border-radius:12px;padding:20px 16px;border:1px solid rgba(0,0,0,0.07);border-top:3px solid #c62828;transition:all .2s;min-width:0}
+  .cred-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.08)}
+  .cred-card-full{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .cred-card-full .cred-card{height:100%}
+  .cred-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.08)}
+  .cred-icon{font-size:20px;margin-bottom:10px}
+  .cred-title{font-size:15px;font-weight:800;margin-bottom:7px;color:#111}
+  .cred-desc{font-size:13px;color:#555;line-height:1.7}
+  .cred-cert-inline{display:flex;gap:10px;margin-top:10px}
+  .cred-cert-inline .cred-cert-wrap{flex:1;max-width:160px;background:#fff;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.08)}
+  .cred-cert-inline .cred-cert-wrap img{width:100%;display:block}
+  .cred-tag{font-size:12px;background:#fff;border:1px solid rgba(0,0,0,0.1);color:#555;padding:3px 10px;border-radius:50px}
+
+  /* ── 服务项目 ── */
+  .services-top{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+  .svc-card{background:#f5f6fa;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);transition:all .2s}
+  .svc-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.08)}
+  .svc-card-hd{display:flex;align-items:center;gap:10px;padding:14px 16px 0}
+  .svc-num{width:28px;height:28px;min-width:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff}
+  .svc-num.red{background:linear-gradient(135deg,#c62828,#e53935)}
+  .svc-num.yellow{background:linear-gradient(135deg,#f57c00,#ff9800)}
+  .svc-num.green{background:linear-gradient(135deg,#2e7d32,#43a047)}
+  .svc-name{font-size:15px;font-weight:800;color:#111}
+  .svc-card-body{padding:8px 16px 14px}
+  .svc-tags{display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap}
+  .svc-tag{font-size:11px;padding:2px 9px;border-radius:4px;background:rgba(198,40,40,0.1);color:#c62828;font-weight:600}
+  .svc-tag.blue{background:rgba(30,100,200,0.1);color:#1e64c8}
+  .svc-tag.star{background:rgba(255,160,0,0.15);color:#bf4a00}
+  .svc-desc{font-size:13px;color:#555;line-height:1.65;margin-bottom:8px}
+  .svc-detail-item{display:flex;align-items:flex-start;gap:7px;margin-bottom:5px}
+  .svc-dot{width:5px;height:5px;min-width:5px;background:#c62828;border-radius:50%;margin-top:7px;flex-shrink:0}
+  .svc-detail-text{font-size:13px;color:#666}
+  .svc-suit{font-size:11px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid rgba(0,0,0,0.05)}
+  .svc-suit span{color:#c62828;font-weight:600}
+  .svc-more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .svc-more-item{background:#f5f6fa;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:8px;border:1px solid rgba(0,0,0,0.05)}
+  .svc-more-num{font-size:12px;color:#c62828;font-weight:700;min-width:18px}
+  .svc-more-text{font-size:13px;color:#666}
+
+  /* ── 客户画像 ── */
+  .client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .client-card{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#f5f6fa;border-radius:10px;border:1px solid rgba(0,0,0,0.06);transition:all .2s;cursor:default}
+  .client-card:hover{background:#fff;border-color:rgba(198,40,40,0.2);box-shadow:0 3px 12px rgba(0,0,0,0.06)}
+  .client-icon{font-size:22px;min-width:30px}
+  .client-name{font-size:13px;font-weight:700;margin-bottom:1px;color:#111}
+  .client-desc{font-size:11px;color:#888}
+
+  /* ── 流程 ── */
+  .process{background:#c62828;padding:40px 48px}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:0 auto}
+  .proc-step{text-align:center;background:rgba(255,255,255,0.12);border-radius:12px;padding:20px 14px;border:1px solid rgba(255,255,255,0.2)}
+  .proc-icon{width:44px;height:44px;border-radius:50%;background:#fff;color:#c62828;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:16px;font-weight:800}
+  .proc-title{font-size:14px;font-weight:800;margin-bottom:3px;color:#fff}
+  .proc-sub{font-size:12px;color:rgba(255,255,255,0.7)}
+
+  /* ── 转化区 ── */
+  .convert-section{background:#f5f6fa;padding:48px 48px}
+  .convert-inner{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start}
+  .convert-gift{background:#fff;border:2px solid rgba(198,40,40,0.18);border-radius:14px;padding:22px;text-align:center;margin-bottom:20px;box-shadow:0 4px 16px rgba(0,0,0,0.05)}
+  .convert-gift-title{font-size:20px;font-weight:900;margin-bottom:6px;color:#111}
+  .convert-gift-title span{color:#c62828}
+  .convert-gift-sub{font-size:14px;color:#666;margin-bottom:8px;line-height:1.6}
+  .convert-gift-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:6px}
+  .convert-gift-tag{font-size:12px;background:#f5f6fa;border:1px solid rgba(198,40,40,0.2);color:#c62828;padding:3px 12px;border-radius:50px;font-weight:600}
+  .convert-problem-title{font-size:15px;font-weight:800;margin-bottom:12px;color:#111}
+  .convert-q-list{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+  .convert-q-item{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.07);transition:all .2s}
+  .convert-q-item:hover{background:#fff;border-color:rgba(198,40,40,0.2)}
+  .convert-q-check{width:18px;height:18px;min-width:18px;border:2px solid #c62828;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#c62828;font-weight:700;flex-shrink:0}
+  .convert-q-text{font-size:14px;color:#333}
+  .convert-wechat-wrap{display:flex;align-items:center;justify-content:flex-start;gap:10px;margin-bottom:10px}
+  .convert-wechat{display:flex;align-items:center;gap:8px;background:#f0fff4;border:1px solid rgba(0,180,80,0.25);border-radius:10px;padding:10px 16px}
+  .convert-wechat-icon{font-size:18px}
+  .convert-wechat-label{font-size:13px;color:#00b450;font-weight:700}
+  .convert-wechat-num{font-size:16px;font-weight:900;color:#111;letter-spacing:0.5px}
+  .convert-note{font-size:12px;color:#aaa;margin-bottom:12px}
+  .convert-btn{display:block;text-align:center;padding:12px;border-radius:30px;font-size:15px;font-weight:700;text-decoration:none;margin-bottom:8px;transition:all .2s}
+  .convert-btn.primary{background:#c62828;color:#fff;box-shadow:0 4px 16px rgba(198,40,40,0.28)}
+  .convert-btn.primary:hover{background:#b71c1c;transform:translateY(-2px)}
+  .convert-btn.secondary{background:transparent;color:#c62828;border:1.5px solid rgba(198,40,40,0.4)}
+  .convert-btn.secondary:hover{background:#fff}
+  .convert-right{background:#fff;border-radius:14px;padding:22px 18px;border:1px solid rgba(0,0,0,0.07);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.05)}
+  .convert-right img{width:170px;border-radius:10px;border:1px solid rgba(0,0,0,0.08)}
+  .convert-right-name{font-size:15px;font-weight:800;margin-top:10px;color:#111}
+  .convert-right-note{font-size:12px;color:#aaa;margin-top:3px}
+  .convert-divider{height:1px;background:rgba(0,0,0,0.07);margin:12px 0}
+
+  /* ── 页脚 ── */
+  .footer{padding:28px 48px;background:#1a1a2e;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+  .footer-brand img{height:26px;vertical-align:middle;opacity:0.9}
+  .footer-desc{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;max-width:560px;margin-top:5px}
+  .footer-cert{font-size:12px;color:rgba(198,40,40,0.8);margin-top:3px}
+  .footer-stats{display:flex;gap:24px}
+  .footer-stat{text-align:center}
+  .footer-stat-num{font-size:20px;font-weight:900;color:#c62828;line-height:1}
+  .footer-stat-label{font-size:11px;color:rgba(255,255,255,0.4);margin-top:3px}
+
+  /* ── 计算工具区块 ── */
+  .tools-section{background:#f5f6fa;padding:48px 48px;border-top:1px solid rgba(0,0,0,0.05)}
+  .tools-header{text-align:center;margin-bottom:32px}
+  .tools-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:28px}
+  .tool-tab{padding:10px 28px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;border:2px solid rgba(198,40,40,0.3);background:#fff;color:#c62828;transition:all .2s}
+  .tool-tab.active{background:#c62828;color:#fff;border-color:#c62828}
+  .tool-tab:hover:not(.active){border-color:#c62828;background:rgba(198,40,40,0.06)}
+  .calc-wrap{display:none}
+  .calc-wrap.active{display:block}
+  .calc-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,0.1);box-shadow:0 4px 20px rgba(0,0,0,0.07);max-width:860px;margin:0 auto}
+  .calc-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;padding:24px 28px;border-bottom:1px solid rgba(0,0,0,0.07)}
+  .inp-group{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+  .inp-group:last-child{border-bottom:none}
+  .inp-label{flex:0 0 120px;font-size:13px;color:#555;font-weight:600;white-space:nowrap}
+  .inp-field{flex:1}
+  .inp-select,.inp-number{width:100%;padding:8px 12px;border:2px solid #FFE066;border-radius:8px;font-size:13px;font-family:inherit;color:#111;background:#fff9e6;outline:none;transition:border-color .2s}
+  .inp-select:focus,.inp-number:focus{border-color:#c62828;background:#fff}
+  .inp-unit{font-size:12px;color:#888;margin-left:6px;white-space:nowrap}
+  .inp-hint{font-size:11px;color:#aaa;margin-left:6px}
+  .calc-result-bar{background:linear-gradient(135deg,#c62828,#e53935);padding:20px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .result-main{flex:1;min-width:200px}
+  .result-main-label{font-size:12px;color:rgba(255,255,255,0.8);margin-bottom:4px;font-weight:600;letter-spacing:1px}
+  .result-main-value{font-size:36px;font-weight:900;color:#fff;line-height:1}
+  .result-main-unit{font-size:16px;color:rgba(255,255,255,0.8);margin-left:4px;font-weight:600}
+  .result-aux{display:flex;gap:20px;flex-wrap:wrap}
+  .result-aux-item{text-align:center;background:rgba(255,255,255,0.15);border-radius:10px;padding:10px 16px;min-width:80px}
+  .result-aux-n{font-size:20px;font-weight:900;color:#fff;line-height:1}
+  .result-aux-l{font-size:11px;color:rgba(255,255,255,0.75);margin-top:3px}
+  .result-extra{padding:16px 28px;background:#fff;border-top:1px solid rgba(0,0,0,0.07);display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+  .result-msg{font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;flex:1;min-width:200px}
+  .result-msg.ok{background:#e8f5e9;color:#2e7d32}
+  .result-msg.warn{background:#fff3e0;color:#e65100}
+  .result-msg.info{background:#e3f2fd;color:#1565c0}
+  .result-msg.neutral{background:#f5f5f5;color:#555}
+  .result-note{font-size:12px;color:#888;padding:8px 16px;background:#fafafa;border-radius:8px;flex:1;min-width:200px;border:1px solid rgba(0,0,0,0.06)}
+  .calc-formula-note{background:#fff;padding:14px 28px;border-top:1px solid rgba(0,0,0,0.05);font-size:12px;color:#999;text-align:center}
+  .calc-formula-note code{background:#f5f5f5;padding:1px 6px;border-radius:4px;font-family:monospace;color:#c62828}
+  /* quick calc specific */
+  .quick-result-display{background:#c62828;color:#fff;text-align:center;padding:24px 28px}
+  .quick-result-label{font-size:13px;color:rgba(255,255,255,0.8);margin-bottom:6px;font-weight:600;letter-spacing:1px}
+  .quick-result-value{font-size:52px;font-weight:900;line-height:1}
+  .quick-result-unit{font-size:18px;color:rgba(255,255,255,0.8);margin-left:4px}
+  .quick-result-sub{font-size:13px;color:rgba(255,255,255,0.7);margin-top:8px}
+  .quick-result-msg{background:#fff;padding:16px 28px;border-top:1px solid rgba(0,0,0,0.07);font-size:14px;font-weight:600;color:#555;text-align:center}
+  .quick-result-msg strong{color:#c62828}
+  .quick-ref-note{background:#fff;padding:12px 28px;border-top:1px solid rgba(0,0,0,0.06);font-size:12px;color:#888;text-align:center}
+  .tool-switcher{display:flex;justify-content:center;gap:8px;margin-bottom:20px}
+
+  /* ── 响应式 ── */
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-right{border-left:none;border-top:1px solid rgba(0,0,0,0.06);padding:24px 20px}
+    .cred-grid{grid-template-columns:1fr}
+    .services-top{grid-template-columns:1fr}
+    .client-grid{grid-template-columns:repeat(2,1fr)}
+    .convert-inner{grid-template-columns:1fr}
+    .footer{grid-template-columns:1fr}
+    .section{padding:36px 20px}
+    .hero-left{padding:32px 20px 24px}
+    .process{padding:36px 20px}
+    .convert-section{padding:36px 20px}
+    .footer{padding:24px 20px}
+    .tools-section{padding:36px 20px}
+    .inp-label{flex:0 0 100px;font-size:12px}
+    .calc-inputs{padding:16px 20px}
+    .calc-result-bar{padding:16px 20px}
+    .result-extra{padding:12px 20px}
+    .nav-tools .nav-tool-btn span{display:none}
+  }
+  @media(max-width:600px){
+    .stats-bar{grid-template-columns:repeat(2,1fr)}
+    .client-grid{grid-template-columns:1fr}
+    .svc-more-grid{grid-template-columns:1fr}
+    .process-grid{grid-template-columns:repeat(2,1fr)}
+    .tools-tabs{flex-direction:column;align-items:center}
+    .tool-tab{width:220px;text-align:center}
+    .result-aux{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="navbar">
+  <div class="brand"><img src="安消同行落地页效果预览_全屏版_images/安消同行logo.png" alt="安消同行"></div>
+  <div class="nav-tools">
+    <a href="#tools" class="nav-tool-btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});return false;">🧮 工具</a>
+    <a href="#services" class="nav-tool-btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">服务</a>
+    <a href="#convert" class="nav-tool-btn" onclick="document.getElementById('convert').scrollIntoView({behavior:'smooth'});return false;">联系</a>
+  </div>
+  <a href="tel:18070280307" class="nav-phone">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.15 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006.29 6.29l1.46-1.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    180 7028 0307
+  </a>
+</nav>
+
+<!-- 封面 -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🏠 企业消防实战顾问</div>
+    <h1 class="hero-title">
+      你的企业，<span class="accent">下一次消防检查</span>，<br>
+      会不会被开出整改通知？
+    </h1>
+    <p class="hero-sub">
+      <strong>17年消防实战老兵</strong>，9年第三方消防技术服务机构 +
+      8年大型物业安全管理。<br>
+      教你一套让迎检不再慌乱的自检方法。
+    </p>
+    <div class="hero-actions">
+      <a href="#convert" class="hero-cta">🎁 免费领 · 企业消防隐患自检清单 →</a>
+      <a href="#services" class="hero-cta outline">了解我能做什么</a>
+    </div>
+    <div class="hero-contact" style="margin-top:4px">
+      <div>📞 微信/电话：180 7028 0307</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-avatar">
+      <img src="安消同行落地页效果预览_全屏版_images/个人工作照.jpg" alt="魏际强" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div style="display:none;width:100%;height:100%;background:linear-gradient(135deg,#c62828,#e53935);align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff">魏</div>
+    </div>
+    <div class="hero-name">魏际强 · 安消同行</div>
+    <div class="hero-name-sub">注册消防工程师 · 注册安全工程师</div>
+    <div class="hero-exp-row">
+      <div class="hero-exp-item">
+        <div class="hero-exp-num">9年</div>
+        <div class="hero-exp-label">第三方消防技术经验</div>
+      </div>
+      <div class="hero-exp-item">
+        <div class="hero-exp-num">8年</div>
+        <div class="hero-exp-label">物业安全管理经验</div>
+      </div>
+    </div>
+    <div class="hero-contact">
+      <div>☎ 180 7028 0307</div>
+      <div>微信 anxiaotongxing</div>
+    </div>
+  </div>
+</div>
+
+<!-- 数据条 -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">9年</div><div class="stat-label">第三方消防技术服务机构</div></div>
+  <div class="stat-item"><div class="stat-num">8年</div><div class="stat-label">大型物业企业安全管理</div></div>
+  <div class="stat-item"><div class="stat-num">17年</div><div class="stat-label">行业深耕</div></div>
+  <div class="stat-item"><div class="stat-num">100+</div><div class="stat-label">服务企业客户</div></div>
+</div>
+
+<!-- 信任背书 -->
+<div class="section">
+  <div class="section-tag">Professional Background</div>
+  <h2 class="section-title">从现场走出来的<span class="accent">消防安全管理专家</span></h2>
+  <p class="section-sub">不是只会写报告的，是从一线摸爬滚打出来的</p>
+  <div class="divider"></div>
+
+  <div class="cred-grid">
+    <div class="cred-card">
+      <div class="cred-icon">🛠️</div>
+      <div class="cred-title">9年 · 第三方消防技术服务机构</div>
+      <div class="cred-desc">消防设施维保、维修、检测、工程施工全流程一线经历。熟悉各类消防系统设备性能，知道故障通常出在哪里、整改通知单通常怎么写。</div>
+    </div>
+    <div class="cred-card">
+      <div class="cred-icon">🏢</div>
+      <div class="cred-title">8年 · 大型物业企业多业态管理</div>
+      <div class="cred-desc">写字楼·商业综合体·住宅小区·产业园区·医院·学校·物流园·停车场·国企后勤。消防安全管理体系搭建、大型消防整改项目操盘、迎检实战经验。</div>
+    </div>
+    <div class="cred-card-full">
+      <div class="cred-card">
+        <div class="cred-icon">📐</div>
+        <div class="cred-title">能落地，不只会写文本</div>
+        <div class="cred-desc">从技术方案到施工管理，从制度编制到现场带教，从隐患排查到整改闭环 —— 知道现场哪个环节容易出错，知道检查时重点看什么，知道怎么跟监管部门沟通。</div>
+        <div class="cred-cert-inline">
+          <div class="cred-cert-wrap">
+            <img src="安消同行落地页效果预览_全屏版_images/一级注册消防工程师-1.jpg" alt="一级注册消防工程师证书" onerror="this.parentElement.style.display='none'">
+          </div>
+          <div class="cred-cert-wrap">
+            <img src="安消同行落地页效果预览_全屏版_images/中级注册安全工程师-1.jpg" alt="中级注册安全工程师证书" onerror="this.parentElement.style.display='none'">
+          </div>
+        </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-icon">🎓</div>
+        <div class="cred-title">持证资质</div>
+        <div class="cred-tags" style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+          <span class="cred-tag">消防维保</span>
+          <span class="cred-tag">维修</span>
+          <span class="cred-tag">检测</span>
+          <span class="cred-tag">工程施工</span>
+          <span class="cred-tag">写字楼</span>
+          <span class="cred-tag">商业综合体</span>
+          <span class="cred-tag">住宅小区</span>
+          <span class="cred-tag">产业园区</span>
+          <span class="cred-tag">医院</span>
+          <span class="cred-tag">学校</span>
+          <span class="cred-tag">物流园</span>
+          <span class="cred-tag">停车场</span>
+          <span class="cred-tag">国企后勤</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 服务项目 -->
+<div class="section section-alt" id="services">
+  <div class="section-tag">Services</div>
+  <h2 class="section-title">我能帮你解决<span class="accent">这些问题</span></h2>
+  <p class="section-sub">主推三大服务 · 其他服务同样支持</p>
+  <div class="divider"></div>
+
+  <div class="services-top">
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num red">1</div>
+        <div class="svc-name">企业安全 / 消防顾问</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag star">⭐ 主推</span>
+          <span class="svc-tag">长期顾问</span>
+        </div>
+        <div class="svc-desc">你的物业项目需要一个"常驻消防顾问"，但专职招聘成本高、人员流动大、不稳定。我能按项目配置，灵活周期，随叫随到。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">日常巡检带教，发现问题不过夜</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">迎检前专项检查，整改清单直接出</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接消防规范，不让你白跑</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">招投标技术支撑，从投标到履约全流程</div></div>
+        <div class="svc-suit">适用业态：<span>写字楼·商业综合体·住宅·产业园区·医院·学校·物流园·停车场·国企后勤</span></div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num yellow">2</div>
+        <div class="svc-name">安全咨询 & 安全评估</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag star">⭐ 主推</span>
+          <span class="svc-tag blue">出具报告</span>
+        </div>
+        <div class="svc-desc">消防设施每年在维保，但你不知道到底合不合格。我能出具专业评估报告，明确告知哪个合格、哪个要改。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接 GB55037-2022 等现行规范</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">隐患分级评估，告诉你先改哪个后改哪个</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">白纸黑字，整改有依据，迎检有底气</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">适合：年度评估·整改前评估·迎检前自评</div></div>
+        <div class="svc-suit">适用业态：<span>所有业态均可按需出具评估报告</span></div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num green">3</div>
+        <div class="svc-name">消防安全培训</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag star">⭐ 主推</span>
+          <span class="svc-tag">按业态定制</span>
+        </div>
+        <div class="svc-desc">网上资料不系统不落地。我能按业态定制课件，含现场带教，不是纯放PPT。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">按业态定制（物业/医院/学校/商业综合体/工厂）</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">内容涵盖：法规更新 + 现场隐患 + 应急处置</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">配套考核题库，培训有记录可查</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">含现场带教 + 实操演练</div></div>
+        <div class="svc-suit">适用场景：<span>新员工入职·消防宣传月·专项演练·管理层安全意识</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc-more-grid">
+    <div class="svc-more-item"><span class="svc-more-num">④</span><span class="svc-more-text">风险隐患排查诊断</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑤</span><span class="svc-more-text">消防安全管理制度编制</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑥</span><span class="svc-more-text">应急预案编制与演练</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑦</span><span class="svc-more-text">消防重点单位档案建立</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑧</span><span class="svc-more-text">消防招投标技术支撑</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑨</span><span class="svc-more-text">新改扩建消防前置咨询</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     计算工具板块
+═══════════════════════════════════════════════════════ -->
+<div class="tools-section" id="tools">
+  <div class="tools-header">
+    <div class="section-tag">🧮 Free Tools</div>
+    <h2 class="section-title">实用工具 · <span class="accent">免费使用</span></h2>
+    <p class="section-sub">依据《建筑灭火器配置设计规范》GB 50140-2005 编制</p>
+  </div>
+
+  <div class="tool-switcher">
+    <button class="tool-tab active" id="tab-sci" onclick="switchTab('sci')">📐 灭火器科学计算器</button>
+    <button class="tool-tab" id="tab-quick" onclick="switchTab('quick')">⚡ 灭火器速算表</button>
+  </div>
+
+  <!-- ── 科学计算器 ── -->
+  <div class="calc-wrap active" id="calc-sci">
+    <div class="calc-card">
+      <div class="calc-inputs">
+        <div class="inp-group">
+          <div class="inp-label">火灾种类</div>
+          <div class="inp-field">
+            <select class="inp-select" id="sci-fire" onchange="calcSci()">
+              <option value="">— 请选择 —</option>
+              <option>A类</option>
+              <option>B类</option>
+              <option>C类</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">危险等级</div>
+          <div class="inp-field">
+            <select class="inp-select" id="sci-level" onchange="calcSci()">
+              <option value="">— 请选择 —</option>
+              <option>严重危险级</option>
+              <option>中危险级</option>
+              <option>轻危险级</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">灭火器类型</div>
+          <div class="inp-field">
+            <select class="inp-select" id="sci-type" onchange="calcSci()">
+              <option value="">— 请选择 —</option>
+              <option>手提式</option>
+              <option>推车式</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">计算单元面积 S</div>
+          <div class="inp-field">
+            <input type="number" class="inp-number" id="sci-area" placeholder="如 500" min="1" oninput="calcSci()">
+            <span class="inp-unit">m²</span>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">修正系数 K</div>
+          <div class="inp-field">
+            <select class="inp-select" id="sci-k" onchange="calcSci()">
+              <option value="">— 请选择 —</option>
+              <option value="1.0">1.0（无室内消火栓/灭火系统）</option>
+              <option value="0.9">0.9（设有室内消火栓系统）</option>
+              <option value="0.7">0.7（设有灭火系统）</option>
+              <option value="0.5">0.5（同时设有两者）</option>
+              <option value="0.3">0.3（露天堆场/储罐区）</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">特殊场所</div>
+          <div class="inp-field">
+            <select class="inp-select" id="sci-special" onchange="calcSci()">
+              <option value="其它">其它</option>
+              <option>歌舞游艺场所</option>
+              <option>商场</option>
+              <option>网吧</option>
+              <option>寺庙</option>
+              <option>地下场所</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">设置点数量 N</div>
+          <div class="inp-field">
+            <input type="number" class="inp-number" id="sci-n" placeholder="灭火器设置点数量" min="1" oninput="calcSci()">
+            <span class="inp-unit">个</span>
+            <span class="inp-hint">Q÷具级≤2时自动输出最低2具</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result-bar" id="sci-result-bar" style="display:none">
+        <div class="result-main">
+          <div class="result-main-label">每设置点需配灭火级别 Qe</div>
+          <div class="result-main-value" id="sci-qe-val">—</div>
+        </div>
+        <div class="result-aux">
+          <div class="result-aux-item">
+            <div class="result-aux-n" id="sci-j-val">—</div>
+            <div class="result-aux-l">灭火器数量 J（具）</div>
+          </div>
+          <div class="result-aux-item">
+            <div class="result-aux-n" id="sci-cover-val">—</div>
+            <div class="result-aux-l">覆盖面积（m²）</div>
+          </div>
+          <div class="result-aux-item">
+            <div class="result-aux-n" id="sci-dist-val">—</div>
+            <div class="result-aux-l">最大保护距离（m）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-extra" id="sci-msgs" style="display:none"></div>
+
+      <div class="calc-formula-note">
+        规范依据：GB 50140-2005 · 公式：Q = K×(S÷U) · Qe = Q÷N · J = CEILING(Qe÷具级, 1) · 最低配置：Q÷具级≤2 时直接输出2具
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 速算表 ── -->
+  <div class="calc-wrap" id="calc-quick">
+    <div class="calc-card">
+      <div class="quick-result-display" id="quick-result-display" style="display:none">
+        <div class="quick-result-label">该计算单元最小配置量</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;flex-wrap:wrap">
+          <div class="quick-result-value" id="quick-j-val">—</div>
+          <div class="quick-result-unit">具</div>
+        </div>
+        <div class="quick-result-sub" id="quick-sub-val">— 级 · 1具保护 — m²</div>
+      </div>
+
+      <div class="calc-inputs">
+        <div class="inp-group">
+          <div class="inp-label">火灾种类</div>
+          <div class="inp-field">
+            <select class="inp-select" id="q-fire" onchange="calcQuick()">
+              <option value="">— 请选择 —</option>
+              <option>A类</option>
+              <option>B类</option>
+              <option>C类</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">危险等级</div>
+          <div class="inp-field">
+            <select class="inp-select" id="q-level" onchange="calcQuick()">
+              <option value="">— 请选择 —</option>
+              <option>严重危险级</option>
+              <option>中危险级</option>
+              <option>轻危险级</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">灭火器类型</div>
+          <div class="inp-field">
+            <select class="inp-select" id="q-type" onchange="calcQuick()">
+              <option value="">— 请选择 —</option>
+              <option>手提式</option>
+              <option>推车式</option>
+            </select>
+          </div>
+        </div>
+        <div class="inp-group">
+          <div class="inp-label">计算单元面积 S</div>
+          <div class="inp-field">
+            <input type="number" class="inp-number" id="q-area" placeholder="如 500" min="1" oninput="calcQuick()">
+            <span class="inp-unit">m²</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-result-msg" id="quick-msg" style="display:none"></div>
+
+      <div class="quick-ref-note">
+        ⚡ 速算表 K值默认1.0（不打折，确保任何场所均满足规范要求）· 特殊场所（歌舞/网吧/商场/寺庙/地下）须在备注中声明：配置量 × 1.3<br>
+        不适用于 D类（金属）/ E类（带电）/ F类（烹饪油脂）火灾 · 规范依据：GB 50140-2005
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 客户画像 -->
+<div class="section">
+  <div class="section-tag">Target Clients</div>
+  <h2 class="section-title">你的企业有<span class="accent">这样的困惑</span>吗？</h2>
+  <div class="divider"></div>
+
+  <div class="client-grid">
+    <div class="client-card">
+      <div class="client-icon">🏢</div>
+      <div><div class="client-name">物业公司安全总监</div><div class="client-desc">项目多、业态杂、每次迎检都紧张</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🏬</div>
+      <div><div class="client-name">商业综合体消防负责人</div><div class="client-desc">动火作业多、装修管控难</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🏥</div>
+      <div><div class="client-name">医院/学校后勤安全负责人</div><div class="client-desc">人员密集、责任重、检查应接不暇</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🏭</div>
+      <div><div class="client-name">工厂/物流园安全管理人员</div><div class="client-desc">隐患多、整改难、缺乏专业支撑</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🏠</div>
+      <div><div class="client-name">住宅小区物业安全负责人</div><div class="client-desc">设备老旧、业主诉求多，资金有限</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🌆</div>
+      <div><div class="client-name">产业园区/科技园运营方</div><div class="client-desc">入驻企业多、动火作业频繁</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🅿️</div>
+      <div><div class="client-name">停车场/火车站后勤负责人</div><div class="client-desc">建筑结构复杂、设施分散、记录不完整</div></div>
+    </div>
+    <div class="client-card">
+      <div class="client-icon">🏛️</div>
+      <div><div class="client-name">国企/机关单位行政安全负责人</div><div class="client-desc">制度合规迎检、人员培训有记录、问责压力大</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 服务流程 -->
+<div class="process">
+  <div class="process-grid">
+    <div class="proc-step">
+      <div class="proc-icon">①</div>
+      <div class="proc-title">来电 / 留言</div>
+      <div class="proc-sub">初步沟通需求</div>
+    </div>
+    <div class="proc-step">
+      <div class="proc-icon">②</div>
+      <div class="proc-title">需求诊断</div>
+      <div class="proc-sub">30分钟内响应</div>
+    </div>
+    <div class="proc-step">
+      <div class="proc-icon">③</div>
+      <div class="proc-title">现场勘察</div>
+      <div class="proc-sub">1-2个工作日</div>
+    </div>
+    <div class="proc-step">
+      <div class="proc-icon">④</div>
+      <div class="proc-title">出具方案</div>
+      <div class="proc-sub">3个工作日内</div>
+    </div>
+  </div>
+</div>
+
+<!-- 转化入口 -->
+<div class="convert-section" id="convert">
+  <div class="section-tag">Contact</div>
+  <h2 class="section-title">现在预约，领取<span class="accent">免费隐患自检清单</span></h2>
+  <div class="divider"></div>
+
+  <div class="convert-inner">
+    <div class="convert-left">
+      <div class="convert-gift">
+        <div class="convert-gift-title">🎁 <span>免费</span>领取 · 企业消防隐患自检清单</div>
+        <div class="convert-gift-sub">9年第三方经验总结，涵盖12大模块，80+检查要点<br>让迎检有清单、不遗漏、有底气</div>
+        <div class="convert-gift-tags">
+          <span class="convert-gift-tag">适用：物业/商场/医院/学校/工厂/园区</span>
+          <span class="convert-gift-tag">免费获取</span>
+          <span class="convert-gift-tag">永久有效</span>
+        </div>
+      </div>
+
+      <div class="convert-problem-title">📋 你有遇到过这些问题吗？</div>
+      <div class="convert-q-list">
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">下个月有消防检查，不知道能不能过</div></div>
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">收到了整改通知，不知道从哪里下手</div></div>
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">消防设施在维保，但心里没底</div></div>
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">想做培训，不知道从哪里入手</div></div>
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">刚接手安全岗位，不知道从哪学起</div></div>
+        <div class="convert-q-item"><div class="convert-q-check">✓</div><div class="convert-q-text">其他消防/安全问题，随时可以联系我</div></div>
+      </div>
+
+      <div class="convert-wechat-wrap">
+        <div class="convert-wechat">
+          <div class="convert-wechat-icon">💬</div>
+          <div class="convert-wechat-label">微信</div>
+          <div class="convert-wechat-num">anxiaotongxing</div>
+        </div>
+      </div>
+      <div class="convert-note">添加请备注：消防咨询</div>
+      <a href="javascript:void(0)" class="convert-btn primary">💬 立即咨询 · 企业安全/消防顾问服务</a>
+      <a href="javascript:void(0)" class="convert-btn secondary">📋 留言"清单" · 获取隐患自检清单</a>
+    </div>
+
+    <div class="convert-right">
+      <img src="安消同行落地页效果预览_全屏版_images/个人微信二维码.png" alt="微信二维码" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22170%22 height=%22170%22 viewBox=%220 0 170 170%22%3E%3Crect width=%22170%22 height=%22170%22 fill=%22%23f5f5f5%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2213%22%3E微信二维码%3C/text%3E%3C/svg%3E'">
+      <div class="convert-right-name">anxiaotongxing</div>
+      <div class="convert-right-note">扫码添加 · 备注"消防咨询"</div>
+      <div class="convert-divider"></div>
+      <a href="javascript:void(0)" class="convert-btn primary" style="display:block;text-align:center;padding:11px;border-radius:30px;background:#c62828;color:#fff;font-size:14px;font-weight:700;text-decoration:none;">💬 扫码添加 · 企业安全/消防顾问服务</a>
+    </div>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+  <div>
+    <div class="footer-brand"><img src="安消同行落地页效果预览_全屏版_images/安消同行logo.png" alt="安消同行"></div>
+    <div class="footer-desc">前9年：第三方消防技术服务机构（消防维保·维修·检测·工程施工）<br>现8年：大型物业企业安全管理（写字楼·商业综合体·住宅·产业园区·医院·学校·物流园·停车场·国企后勤）</div>
+    <div class="footer-cert">持证：注册消防工程师 · 注册安全工程师</div>
+  </div>
+  <div class="footer-stats">
+    <div class="footer-stat"><div class="footer-stat-num">9年</div><div class="footer-stat-label">第三方技术经验</div></div>
+    <div class="footer-stat"><div class="footer-stat-num">8年</div><div class="footer-stat-label">物业安全管理经验</div></div>
+    <div class="footer-stat"><div class="footer-stat-num">100+</div><div class="footer-stat-label">服务企业客户</div></div>
+  </div>
+</div>
+
+<script>
+// ── 查表数据 ──
+const CLASS_MAP = {
+  'A类': { '严重危险级': { rating: '3A', U: 50 }, '中危险级': { rating: '2A', U: 75 }, '轻危险级': { rating: '1A', U: 100 } },
+  'B类': { '严重危险级': { rating: '89B', U: 0.5 }, '中危险级': { rating: '55B', U: 1 }, '轻危险级': { rating: '21B', U: 1.5 } },
+  'C类': { '严重危险级': { rating: '89B', U: 0.5 }, '中危险级': { rating: '55B', U: 1 }, '轻危险级': { rating: '21B', U: 1.5 } }
+};
+const RATING_NUM = { '3A': 3, '2A': 2, '1A': 1, '89B': 89, '55B': 55, '21B': 21 };
+const DISTANCE_MAP = {
+  'A类': { '严重危险级': { '手提式': 15, '推车式': 30 }, '中危险级': { '手提式': 20, '推车式': 40 }, '轻危险级': { '手提式': 25, '推车式': 50 } },
+  'B类': { '严重危险级': { '手提式': 9, '推车式': 18 }, '中危险级': { '手提式': 12, '推车式': 24 }, '轻危险级': { '手提式': 15, '推车式': 30 } },
+  'C类': { '严重危险级': { '手提式': 9, '推车式': 18 }, '中危险级': { '手提式': 12, '推车式': 24 }, '轻危险级': { '手提式': 15, '推车式': 30 } }
+};
+
+// ── 科学计算器 ──
+function calcSci() {
+  const fire = document.getElementById('sci-fire').value;
+  const level = document.getElementById('sci-level').value;
+  const type = document.getElementById('sci-type').value;
+  const area = parseFloat(document.getElementById('sci-area').value);
+  const K = parseFloat(document.getElementById('sci-k').value);
+  const special = document.getElementById('sci-special').value;
+  const N = parseInt(document.getElementById('sci-n').value);
+
+  if (!fire || !level || !type || isNaN(area) || !K) {
+    document.getElementById('sci-result-bar').style.display = 'none';
+    document.getElementById('sci-msgs').style.display = 'none';
+    return;
+  }
+
+  const info = CLASS_MAP[fire][level];
+  const rating = info.rating;
+  const U = info.U;
+  const ratingNum = RATING_NUM[rating];
+  const specialMult = special === '其它' ? 1 : 1.3;
+  const Q = K * (area / U) * specialMult;
+  const dist = DISTANCE_MAP[fire][level][type];
+
+  const msgsEl = document.getElementById('sci-msgs');
+  let html = '';
+  let J, Qe, cover;
+
+  if (N && N > 0 && Q / ratingNum > 2) {
+    Qe = Q / N;
+    J = Math.ceil(Qe / ratingNum);
+    cover = J * ratingNum * U;
+    const check = cover >= Qe ? 'ok' : 'warn';
+    html += `<div class="result-msg ${check}">✔ 覆盖验算：覆盖面积 ${cover.toFixed(1)} m² ${cover >= Qe ? '≥' : '<'} Qe ${Qe.toFixed(2)}，${cover >= Qe ? '合格' : '不合格'}</div>`;
+    html += `<div class="result-note">📏 最大保护距离参考：灭火器相距不应超过 <strong>${dist}m</strong>（${type}，${fire} ${level}）</div>`;
+  } else if (N && N > 0 && Q / ratingNum <= 2) {
+    J = 2;
+    cover = 2 * ratingNum * U;
+    html += `<div class="result-msg info">✔ 合格 — Q÷具级=${(Q/ratingNum).toFixed(2)}≤2，按最低2具配置（GB 50140-2005 第6.1.1条）</div>`;
+    html += `<div class="result-note">📏 最大保护距离参考：灭火器相距不应超过 <strong>${dist}m</strong>（${type}，${fire} ${level}）</div>`;
+  } else {
+    // N not entered or invalid
+    if (Q / ratingNum <= 2) {
+      J = 2;
+      cover = 2 * ratingNum * U;
+      html += `<div class="result-msg info">ℹ️ 当前 Q÷具级=${(Q/ratingNum).toFixed(2)}≤2，填写设置点数量 N 后将输出最低2具</div>`;
+    } else {
+      html += `<div class="result-msg neutral">⚠️ 请填写设置点数量 N（当前 Q÷具级=${(Q/ratingNum).toFixed(2)}>2，需正常计算）</div>`;
+    }
+    J = null; Qe = null; cover = null;
+  }
+
+  document.getElementById('sci-result-bar').style.display = 'flex';
+  document.getElementById('sci-qe-val').textContent = Qe !== null ? Qe.toFixed(2) : '—';
+  document.getElementById('sci-j-val').textContent = J !== null ? J : '—';
+  document.getElementById('sci-cover-val').textContent = cover !== null ? cover.toFixed(1) : '—';
+  document.getElementById('sci-dist-val').textContent = dist;
+  msgsEl.innerHTML = html;
+  msgsEl.style.display = 'flex';
+}
+
+// ── 速算表 ──
+function calcQuick() {
+  const fire = document.getElementById('q-fire').value;
+  const level = document.getElementById('q-level').value;
+  const type = document.getElementById('q-type').value;
+  const area = parseFloat(document.getElementById('q-area').value);
+
+  if (!fire || !level || !type || isNaN(area)) {
+    document.getElementById('quick-result-display').style.display = 'none';
+    document.getElementById('quick-msg').style.display = 'none';
+    return;
+  }
+
+  const info = CLASS_MAP[fire][level];
+  const rating = info.rating;
+  const U = info.U;
+  const ratingNum = RATING_NUM[rating];
+  const Q = area / U; // K=1.0 fixed
+  const J = Math.max(2, Math.ceil(Q / ratingNum));
+  const perUnit = ratingNum * U;
+
+  document.getElementById('quick-result-display').style.display = 'block';
+  document.getElementById('quick-j-val').textContent = J;
+  document.getElementById('quick-sub-val').textContent = `${rating} 级 · 1具保护 ${perUnit} m²`;
+
+  const dist = DISTANCE_MAP[fire][level][type];
+  const msgEl = document.getElementById('quick-msg');
+  msgEl.style.display = 'block';
+  msgEl.innerHTML = `📐 配置结果：该计算单元最小配置量 <strong>${J} 具</strong>（${rating} 级，每具保护 ${perUnit}m²）· 📏 最大保护距离 <strong>${dist}m</strong>（现场布置时灭火器间距不得超过此距离）`;
+}
+
+// ── 工具切换 ──
+function switchTab(tab) {
+  document.getElementById('tab-sci').classList.toggle('active', tab === 'sci');
+  document.getElementById('tab-quick').classList.toggle('active', tab === 'quick');
+  document.getElementById('calc-sci').classList.toggle('active', tab === 'sci');
+  document.getElementById('calc-quick').classList.toggle('active', tab === 'quick');
+}
+
+// ── 平滑滚动 ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
