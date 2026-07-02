@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消防设施操作员 2019版 vs 2026版 对比分析</title>
+<style>
+  :root {
+    --red: #C0392B;
+    --dark-red: #922B21;
+    --orange: #E67E22;
+    --dark-gray: #2C3E50;
+    --medium-gray: #5D6D7E;
+    --light-gray: #ECF0F1;
+    --white: #FFFFFF;
+    --accent: #E74C3C;
+    --gold: #F39C12;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: #F8F9FA;
+    color: #2C3E50;
+    line-height: 1.8;
+  }
+
+  /* ===== 封面 ===== */
+  .cover {
+    background: linear-gradient(135deg, var(--dark-red) 0%, var(--red) 50%, var(--orange) 100%);
+    color: white;
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  .cover-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+  .cover-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(4px);
+  }
+  .cover h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .cover h2 {
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 3px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 auto 30px;
+    border-radius: 2px;
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .cover-meta span { display: flex; align-items: center; gap: 6px; }
+  .cover-codes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .code-box {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  .code-box .label { font-size: 12px; opacity: 0.7; margin-bottom: 4px; }
+  .code-box .value { font-size: 20px; font-weight: 700; letter-spacing: 1px; }
+  .code-box.old .value { color: #FDEBD0; }
+  .code-box.new .value { color: #ABEBC6; }
+
+  /* ===== 导航栏 ===== */
+  .toc {
+    background: var(--dark-gray);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .toc-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toc-inner::-webkit-scrollbar { display: none; }
+  .toc-brand {
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 14px 20px 14px 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    margin-right: 16px;
+    color: var(--gold);
+  }
+  .toc a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 14px 14px;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+  .toc a:hover { color: white; background: rgba(255,255,255,0.08); }
+
+  /* ===== 内容区 ===== */
+  .container { max-width: 1100px; margin: 0 auto; padding: 50px 30px 80px; }
+
+  /* 章节通用 */
+  .section { margin-bottom: 60px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--light-gray);
+  }
+  .section-num {
+    background: var(--red);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-title { font-size: 22px; font-weight: 700; color: var(--dark-gray); }
+  .section-subtitle {
+    font-size: 13px;
+    color: var(--medium-gray);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* 摘要框 */
+  .alert-box {
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 30px;
+    border-left: 4px solid;
+  }
+  .alert-red {
+    background: #FDEDEC;
+    border-color: var(--red);
+  }
+  .alert-orange {
+    background: #FEF5E7;
+    border-color: var(--orange);
+  }
+  .alert-blue {
+    background: #EBF5FB;
+    border-color: #2980B9;
+  }
+  .alert-green {
+    background: #EAFAF1;
+    border-color: #27AE60;
+  }
+  .alert-box h4 { font-size: 15px; margin-bottom: 8px; }
+  .alert-red h4 { color: var(--dark-red); }
+  .alert-orange h4 { color: #D35400; }
+  .alert-box p { font-size: 14px; color: var(--medium-gray); }
+
+  /* 表格通用 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  thead th {
+    background: var(--dark-gray);
+    color: white;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #E8E8E8;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #F9FBFC; }
+  tbody tr:hover { background: #F0F4F8; }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .tag-red { background: #FDEDEC; color: var(--dark-red); }
+  .tag-orange { background: #FEF5E7; color: #D35400; }
+  .tag-green { background: #EAFAF1; color: #1E8449; }
+  .tag-blue { background: #EBF5FB; color: #1A5276; }
+  .tag-gray { background: #ECF0F1; color: var(--medium-gray); }
+
+  .cell-old { color: #7D6608; background: #FEF9E7; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+  .cell-new { color: #1A5276; background: #EBF5FB; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+  .cell-del { color: #922B21; text-decoration: line-through; opacity: 0.8; }
+  .cell-add { color: #1E8449; font-weight: 600; }
+
+  /* 大表格滚动 */
+  .table-scroll { overflow-x: auto; margin-bottom: 16px; }
+  .table-scroll table { min-width: 600px; }
+
+  /* 列表 */
+  .disc-list { padding-left: 20px; margin: 8px 0; }
+  .disc-list li { margin-bottom: 6px; font-size: 14px; color: var(--medium-gray); }
+
+  /* 亮点卡片 */
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .highlight-card {
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid;
+  }
+  .highlight-card.red { background: #FDEDEC; border-color: var(--red); }
+  .highlight-card.orange { background: #FEF5E7; border-color: var(--orange); }
+  .highlight-card.blue { background: #EBF5FB; border-color: #2980B9; }
+  .highlight-card.green { background: #EAFAF1; border-color: #27AE60; }
+  .highlight-card h4 { font-size: 15px; margin-bottom: 6px; }
+  .highlight-card.red h4 { color: var(--dark-red); }
+  .highlight-card.orange h4 { color: #D35400; }
+  .highlight-card.blue h4 { color: #1A5276; }
+  .highlight-card.green h4 { color: #1E8449; }
+  .highlight-card p { font-size: 13px; color: var(--medium-gray); }
+
+  /* 分割线 */
+  .divider {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 40px 0;
+  }
+
+  /* 页脚 */
+  .footer {
+    background: var(--dark-gray);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+  }
+  .footer strong { color: rgba(255,255,255,0.9); }
+
+  @media (max-width: 768px) {
+    .cover h1 { font-size: 28px; }
+    .cover h2 { font-size: 16px; }
+    .cover { padding: 50px 20px 40px; }
+    .container { padding: 30px 16px 60px; }
+    .section-header { flex-wrap: wrap; }
+    .section-subtitle { margin-left: 0; width: 100%; }
+    .cover-codes { flex-direction: column; align-items: center; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 封面 ===== -->
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-badge">国家职业技能标准 · 全文对比解读</div>
+    <h1>消防设施操作员</h1>
+    <h2>2019版 vs 2026年版 · 逐条核实版</h2>
+    <div class="cover-divider"></div>
+    <p style="font-size:15px; opacity:0.85; margin-bottom:8px;">
+      取消职业方向划分 · 新增职称申报通道 · 规范体系全面升级
+    </p>
+    <div class="cover-meta">
+      <span>📅 2019版实施：2020年1月1日</span>
+      <span>📅 2026版实施：2026年10月1日</span>
+      <span>📋 依据：《职业分类大典（2022版）》</span>
+    </div>
+    <div class="cover-codes">
+      <div class="code-box old">
+        <div class="label">2019版 · 职业编码</div>
+        <div class="value">4-07-05-04</div>
+      </div>
+      <div style="display:flex; align-items:center; font-size:20px; opacity:0.6;">→</div>
+      <div class="code-box new">
+        <div class="label">2026版 · 职业编码</div>
+        <div class="value">4-07-05-03</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 导航 ===== -->
+<nav class="toc">
+  <div class="toc-inner">
+    <div class="toc-brand">📖 目录</div>
+    <a href="#sec1">总体框架</a>
+    <a href="#sec2">申报条件</a>
+    <a href="#sec3">相关职业·相关专业</a>
+    <a href="#sec4">基础知识与法规</a>
+    <a href="#sec5">评价配比</a>
+    <a href="#sec6">权重表</a>
+    <a href="#sec7">新增·删除·重大调整</a>
+  </div>
+</nav>
+
+<!-- ===== 正文 ===== -->
+<div class="container">
+
+  <!-- ========== 一、总体框架 ========== -->
+  <div class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-num">一</div>
+      <div class="section-title">总体框架对比</div>
+      <div class="section-subtitle">核心结构性变化</div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>对比项目</th>
+            <th>2019版（4-07-05-04）</th>
+            <th>2026版（4-07-05-03）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>职业名称</strong></td>
+            <td>消防设施操作员</td>
+            <td>消防设施操作员（不变）</td>
+          </tr>
+          <tr>
+            <td><strong>职业定义</strong></td>
+            <td>从事建（构）筑物消防设施运行、操作和维修、保养、检测等工作的人员</td>
+            <td>从事建（构）筑物消防设施运行、操作和维修、保养、检测等工作的人员（不变）</td>
+          </tr>
+          <tr>
+            <td><strong>职业编码</strong></td>
+            <td><span class="cell-old">4-07-05-04</span></td>
+            <td><span class="cell-new">4-07-05-03</span></td>
+          </tr>
+          <tr>
+            <td><strong>依据大典版本</strong></td>
+            <td>《职业分类大典（2015版）》</td>
+            <td>《职业分类大典（<span class="cell-add">2022版</span>）》</td>
+          </tr>
+          <tr>
+            <td><strong>编制规程版本</strong></td>
+            <td>《国家职业技能标准编制技术规程（2018版）》</td>
+            <td>《国家职业技能标准编制技术规程（<span class="cell-add">2023版</span>）》</td>
+          </tr>
+          <tr>
+            <td><strong>联合发布单位</strong></td>
+            <td>人力资源社会保障部 + <span class="cell-del">应急管理部</span></td>
+            <td>人力资源社会保障部 + <span class="cell-add">国家消防救援局</span></td>
+          </tr>
+          <tr>
+            <td><strong>等级数量</strong></td>
+            <td>五级/初级工 ～ 一级/高级技师（5个等级）</td>
+            <td>五级/初级工 ～ 一级/高级技师（5个等级，不变）</td>
+          </tr>
+          <tr>
+            <td><strong>职业方向</strong></td>
+            <td><strong>两个方向：监控操作 / 检测维修保养</strong></td>
+            <td><span class="cell-del">两个方向</span> → <span class="cell-add">取消方向划分，统一考核</span></td>
+          </tr>
+          <tr>
+            <td><strong>普通受教育程度</strong></td>
+            <td>高中毕业（或同等学历）</td>
+            <td>高中毕业（或同等学历）</td>
+          </tr>
+          <tr>
+            <td><strong>职业能力特征</strong></td>
+            <td>观察、分析、判断、表达和计算能力，空间感、形知觉、色觉、嗅觉、听觉正常，<strong>手指、手臂灵活，动作协调</strong></td>
+            <td>观察、分析、计算、判断、表达和<span class="cell-add">应急应变</span>能力，空间感、形知觉、色觉、<span class="cell-add">视觉</span>、嗅觉、听觉正常，<span class="cell-del">手指、手臂灵活</span>→<span class="cell-add">四肢健全，具备良好的身体灵活性和动作协调性</span></td>
+          </tr>
+          <tr>
+            <td><strong>实施日期</strong></td>
+            <td>2020年1月1日</td>
+            <td><strong>2026年10月1日</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-box alert-red" style="margin-top:24px;">
+      <h4>⚠️ 机构改革背景说明</h4>
+      <p>2026版发布单位由"应急管理部"改为"国家消防救援局"，反映了2018年消防体制改革后，国家消防救援局作为应急管理部管理的国家局，已正式承担消防行业职业技能鉴定的主管职能。这是消防职业资格管理体系在机构改革后主体责任更加明确化的体现。</p>
+    </div>
+  </div>
+
+  <!-- ========== 二、申报条件 ========== -->
+  <div class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-num">二</div>
+      <div class="section-title">申报条件逐级对比</div>
+      <div class="section-subtitle">五级 → 四级 → 三级 → 二级 → 一级</div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>等级</th>
+            <th>2019版</th>
+            <th>2026版</th>
+            <th>主要变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 五级 -->
+          <tr style="background:#FEF9E7 !important;">
+            <td rowspan="2"><strong>五级<br>初级工</strong></td>
+            <td>① 累计从事本职业<strong>1年（含）以上</strong></td>
+            <td>① <strong>年满18周岁</strong>，拟从事本职业或相关职业工作</td>
+            <td rowspan="2"><span class="tag tag-red">年龄限制明确化</span><span class="tag tag-green">取消学徒制</span></td>
+          </tr>
+          <tr style="background:#FEF9E7 !important;">
+            <td>② <strong>本职业或相关职业学徒期满</strong></td>
+            <td>② <strong>年满18周岁</strong>，从事本职业或相关职业工作</td>
+          </tr>
+          <!-- 四级 -->
+          <tr style="background:#EBF5FB !important;">
+            <td rowspan="3"><strong>四级<br>中级工</strong></td>
+            <td>① 取得五级证书后，从事本职业<strong>4年（含）以上</strong></td>
+            <td>① 累计从事本职业或相关职业工作<strong>满5年</strong></td>
+            <td rowspan="3"><span class="tag tag-orange">年限调整</span><span class="tag tag-blue">学历通道扩展</span></td>
+          </tr>
+          <tr style="background:#EBF5FB !important;">
+            <td>② 累计从事本职业工作<strong>6年（含）以上</strong></td>
+            <td>② 取得五级证书后，累计从事本职业<strong>满3年</strong></td>
+          </tr>
+          <tr style="background:#EBF5FB !important;">
+            <td>③ 取得技工学校或经评估论证的中等及以上职业学校本专业或相关专业毕业证书（含在校应届毕业生）</td>
+            <td>③ 取得本专业或相关专业的<strong>技工院校或中等及以上职业院校、专科及以上普通高等学校</strong>毕业证书（含在读应届毕业生）</td>
+          </tr>
+          <!-- 三级 -->
+          <tr style="background:#EAFAF1 !important;">
+            <td rowspan="6"><strong>三级<br>高级工</strong></td>
+            <td>① 取得四级证书后，从事本职业<strong>5年（含）以上</strong></td>
+            <td>① 累计从事本职业或相关职业工作<strong>满10年</strong> <span class="tag tag-green">NEW</span></td>
+            <td rowspan="6"><span class="tag tag-red">★重大新增</span><span class="tag tag-orange">年限缩短</span><span class="tag tag-blue">职称通道</span></td>
+          </tr>
+          <tr style="background:#EAFAF1 !important;">
+            <td>② 取得四级证书+高级技工学校/技师学院毕业证书</td>
+            <td>② 取得四级证书后，累计从事本职业<strong>满4年</strong></td>
+          </tr>
+          <tr style="background:#EAFAF1 !important;">
+            <td>③ 大专及以上学历+取得四级证书后，从事本职业<strong>2年（含）以上</strong></td>
+            <td>③ 取得符合专业对应关系的<strong>初级职称</strong>后，累计从事本职业<strong>满1年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#EAFAF1 !important;">
+            <td colspan="2">④ 取得本专业或相关专业的<strong>技工院校高级工班及以上</strong>毕业证书（含在读应届毕业生） <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#EAFAF1 !important;">
+            <td colspan="2">⑤ 取得四级证书+<strong>高等职业学校、专科及以上学校</strong>本专业或相关专业毕业证书 <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#EAFAF1 !important;">
+            <td colspan="2">⑥ 取得经评估论证的<strong>高等职业学校、专科及以上普通高等学校</strong>本专业或相关专业毕业证书 <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <!-- 二级 -->
+          <tr style="background:#F5EEF8 !important;">
+            <td rowspan="6"><strong>二级<br>技师</strong></td>
+            <td>① 取得三级证书后，从事本职业<strong>5年（含）以上</strong></td>
+            <td>① 取得三级证书后，累计从事本职业<strong>满5年</strong></td>
+            <td rowspan="6"><span class="tag tag-red">★重大新增</span><span class="tag tag-orange">年限变化</span><span class="tag tag-blue">职称直通</span></td>
+          </tr>
+          <tr style="background:#F5EEF8 !important;">
+            <td>② 取得三级证书+高级技工学校/技师学院毕业证书</td>
+            <td>② 取得符合专业对应关系的<strong>初级职称</strong>后，满5年，并在取得三级证书后从事<strong>满1年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#F5EEF8 !important;">
+            <td>③ 大专及以上学历+取得三级证书后，从事本职业<strong>2年（含）以上</strong></td>
+            <td>③ 取得符合专业对应关系的<strong>中级职称</strong>后，累计从事本职业<strong>满1年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#F5EEF8 !important;">
+            <td>④ 取得三级证书的高级技工学校、技师学院毕业生，从事本职业<strong>3年（含）以上</strong></td>
+            <td>④ 取得三级证书的高级技工学校、技师学院毕业生，累计从事本职业<strong>满2年</strong></td>
+          </tr>
+          <tr style="background:#F5EEF8 !important;">
+            <td>⑤ 取得<strong>预备技师证书</strong>的技师学院毕业生，从事本职业<strong>2年（含）以上</strong></td>
+            <td>⑤ 取得三级证书<strong>满2年</strong>的技师学院预备技师班、技师班学生 <span class="tag tag-orange">条件放宽</span></td>
+          </tr>
+          <tr style="background:#F5EEF8 !important;">
+            <td colspan="2">⑥ 取得三级证书后，累计从事本职业<strong>满5年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <!-- 一级 -->
+          <tr style="background:#FDEDEC !important;">
+            <td rowspan="3"><strong>一级<br>高级技师</strong></td>
+            <td>① 取得二级证书后，从事本职业<strong>4年（含）以上</strong></td>
+            <td>① 取得二级证书后，累计从事本职业<strong>满5年</strong></td>
+            <td rowspan="3"><span class="tag tag-red">★重大新增</span><span class="tag tag-orange">年限延长</span></td>
+          </tr>
+          <tr style="background:#FDEDEC !important;">
+            <td colspan="2">② 取得符合专业对应关系的<strong>中级职称</strong>后，满5年，并在取得二级证书后从事<strong>满1年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+          <tr style="background:#FDEDEC !important;">
+            <td colspan="2">③ 取得符合专业对应关系的<strong>高级职称</strong>后，累计从事本职业<strong>满1年</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-box alert-red" style="margin-top:20px;">
+      <h4>★ 2026版最重大变化：首次引入职称对应申报通道</h4>
+      <p>
+        <strong>初级职称</strong> → 可申报 <strong>三级/高级工</strong>（满1年）<br>
+        <strong>中级职称</strong> → 可申报 <strong>二级/技师</strong>（满1年）<br>
+        <strong>高级职称</strong> → 可申报 <strong>一级/高级技师</strong>（满1年）<br>
+        这打通了高技能人才与专业技术人才的评价通道，是本次修订的核心亮点之一。
+      </p>
+    </div>
+  </div>
+
+  <!-- ========== 三、相关职业与相关专业 ========== -->
+  <div class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-num">三</div>
+      <div class="section-title">相关职业 & 相关专业</div>
+      <div class="section-subtitle">2019版 19个 → 2026版 23个</div>
+    </div>
+
+    <h3 style="font-size:16px; margin-bottom:12px; color:var(--dark-gray);">▸ "相关职业"目录变化（2019版19个 → 2026版23个，新增4个）</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th>具体职业</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag tag-red">两者均有</span></td>
+            <td>安全技术防范工程技术人员（2026新增独立列出）、消防工程技术人员、安全生产管理工程技术人员、安全评价工程技术人员、人民警察、保卫管理员、消防员、消防指挥员、消防装备管理员、消防安全管理员、消防监督检查员、森林消防员、森林火情瞭望观察员、应急救援员、保安员（2026改为"安全保卫服务"）、智能楼宇管理员、安全防范系统安装维护员、机械设备安装工、管工、电工、安全员</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-green">2026版新增</span></td>
+            <td><strong>物业管理师</strong>（2019版"物业管理员"升级）、<strong>电力电气设备安装工</strong>（2019版"电气设备安装工"细分）、安全智能监测技术方向相关</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-orange">变化</span></td>
+            <td>"物业管理员"→"物业管理师"（称谓升级）<br>"电气设备安装工"→"电力电气设备安装工"（范围细化）<br>"安全防范系统安装维护员"表述微调</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:16px; margin:28px 0 12px; color:var(--dark-gray);">▸ "相关专业"目录变化</h3>
+    <div class="alert-box alert-blue" style="margin-bottom:20px;">
+      <h4>2019版：两层次结构（技工学校 / 中等职业学校）</h4>
+      <p>无明确专科、本科层次的专业列举，范围相对较窄。</p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:100px;">层次</th>
+            <th>2026版新增专业（按类别）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>专科</strong></td>
+            <td>
+              <span class="tag tag-green">NEW</span> 消防救援技术、火灾勘查、核生化消防、森林消防、<strong>应急技术与管理</strong>、<strong>防灾减灾救灾技术</strong>、<strong>应急装备技术与工程</strong>、<strong>安全智能监测技术</strong>、<strong>智慧应急</strong>、现代物业管理、安全保卫服务<br>
+              <span class="tag tag-gray">保留/扩展</span> 消防工程、安全工程、电气自动化设备安装与维修、建筑智能化设备安装与运维、建筑水电设备安装与运维、安全防范工程、网络工程、物联网工程
+            </td>
+          </tr>
+          <tr>
+            <td><strong>本科</strong></td>
+            <td>
+              <span class="tag tag-green">NEW</span> 安全工程、消防工程、消防指挥、安全防范工程、核生化消防、抢险救援指挥与技术、火灾勘查、自动化、电气工程及其自动化
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--medium-gray); margin-top:10px;">
+      ※ 核心变化：应急管理类、消防救援技术类新专业大批量纳入，与消防救援队伍改革和防灾减灾应急管理体系建设直接对应。
+    </p>
+  </div>
+
+  <!-- ========== 四、基础知识与法规 ========== -->
+  <div class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-num">四</div>
+      <div class="section-title">基础知识 & 相关法规引用</div>
+      <div class="section-subtitle">规范体系从分散→通用规范</div>
+    </div>
+
+    <h3 style="font-size:16px; margin-bottom:14px; color:var(--dark-gray);">▸ 2026版相关法规知识引用（10项）</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40px;">序号</th>
+            <th>法规/标准</th>
+            <th style="width:80px;">类型</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>①</td><td>《中华人民共和国劳动法》</td><td><span class="tag tag-blue">新增</span></td></tr>
+          <tr><td>②</td><td>《中华人民共和国职业教育法》</td><td><span class="tag tag-blue">新增</span></td></tr>
+          <tr><td>③</td><td>《中华人民共和国消防法》</td><td><span class="tag tag-gray">保留</span></td></tr>
+          <tr><td>④</td><td>《建筑防火通用规范》（GB 55037）</td><td><span class="tag tag-green">★ 2022新版</span></td></tr>
+          <tr><td>⑤</td><td>《消防设施通用规范》（GB 55036）</td><td><span class="tag tag-green">★ 2022新版</span></td></tr>
+          <tr><td>⑥</td><td>《消防控制室通用技术要求》（GB 25506）</td><td><span class="tag tag-gray">保留</span></td></tr>
+          <tr><td>⑦</td><td>《建筑消防设施的维护管理》（GB 25201）</td><td><span class="tag tag-gray">保留</span></td></tr>
+          <tr><td>⑧</td><td>《建筑消防设施检测技术规范》（GB/T 44481）</td><td><span class="tag tag-green">★ 2024新版</span></td></tr>
+          <tr><td>⑨</td><td>《社会单位灭火和应急疏散预案编制及实施导则》（GB/T 38315）</td><td><span class="tag tag-green">★ 新增</span></td></tr>
+          <tr><td>⑩</td><td>其他消防法规、政策及标准相关知识</td><td><span class="tag tag-gray">概括性兜底</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-box alert-orange" style="margin-top:20px;">
+      <h4>★ 规范体系重大升级：从分散设计规范 → 通用规范体系</h4>
+      <p>
+        2026版以 <strong>GB 55036《消防设施通用规范》</strong>和 <strong>GB 55037《建筑防火通用规范》</strong>（均为2022年发布）替代了原有各细分系统的设计规范（如 GB 50116、GB 50974、GB 50084 等），标志着中国消防标准体系正式进入<strong>"通用规范 + 专项规范"</strong>的新阶段。同时新增 GB/T 38315（应急预案编制导则），弱化了对具体设施设计规范的罗列。
+      </p>
+    </div>
+  </div>
+
+  <!-- ========== 五、评价配比 ========== -->
+  <div class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-num">五</div>
+      <div class="section-title">评价方式 & 配比变化</div>
+      <div class="section-subtitle">机考、考评员、综合评审全面细化</div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>评价环节</th>
+            <th>2019版</th>
+            <th>2026版</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>理论知识考试</strong></td>
+            <td>笔试、机考等方式，监考配比 <strong>1∶15</strong>，每考场≥2名监考</td>
+            <td>笔试、机考等方式，监考配比 <strong>1∶15</strong>（机考 <strong>1∶30</strong>），每考场≥2名监考 <span class="tag tag-green">NEW 细化</span></td>
+          </tr>
+          <tr>
+            <td><strong>操作技能考核</strong></td>
+            <td>实际操作方式，配比 <strong>1∶5</strong>，每考位≥2人，3人（含）以上单数</td>
+            <td>实际操作方式，配比 <strong>1∶5</strong>，每考位≥2人，3人（含）以上单数，<br><strong>每位考生由不少于3名考评员评分</strong> <span class="tag tag-green">★ 新增强化</span></td>
+          </tr>
+          <tr>
+            <td><strong>综合评审</strong></td>
+            <td><strong>5人（含）以上</strong>单数</td>
+            <td><strong>3人（含）以上</strong>单数 <span class="tag tag-green">降低门槛</span></td>
+          </tr>
+          <tr>
+            <td><strong>综合评审场所</strong></td>
+            <td>未明确指定</td>
+            <td><strong>多媒体教室</strong> <span class="tag tag-green">NEW 明确</span></td>
+          </tr>
+          <tr>
+            <td><strong>评价时长</strong></td>
+            <td>理论≥100min（机考≥60min），技能五/四级≥30min，三/二/一级≥40min，综合≥30min</td>
+            <td>（不变）</td>
+          </tr>
+          <tr>
+            <td><strong>关键技能标注</strong></td>
+            <td>无</td>
+            <td>标注"<strong>★</strong>"为涉及安全生产或操作的关键技能，违反操作规程或未达要求则技能考核<strong>不合格</strong> <span class="tag tag-green">NEW</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== 六、权重表 ========== -->
+  <div class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-num">六</div>
+      <div class="section-title">职业技能权重表</div>
+      <div class="section-subtitle">理论知识 & 技能要求</div>
+    </div>
+
+    <h3 style="font-size:16px; margin-bottom:12px; color:var(--dark-gray);">▸ 理论知识权重</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>职业功能</th>
+            <th>五级</th>
+            <th>四级</th>
+            <th>三级</th>
+            <th>二级</th>
+            <th>一级</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>设施监控操作</td><td>50%</td><td>45%</td><td>30%</td><td>15%</td><td>—</td></tr>
+          <tr><td>设施维护保养</td><td>20%</td><td>20%</td><td>20%</td><td>25%</td><td>30%</td></tr>
+          <tr><td>设施检测</td><td>20%</td><td>25%</td><td>30%</td><td>30%</td><td>30%</td></tr>
+          <tr><td>技术管理和培训</td><td>—</td><td>—</td><td>10%</td><td>15%</td><td>30%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:16px; margin:24px 0 12px; color:var(--dark-gray);">▸ 技能要求权重</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>职业功能</th>
+            <th>五级</th>
+            <th>四级</th>
+            <th>三级</th>
+            <th>二级</th>
+            <th>一级</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>设施监控操作</td><td>50%</td><td>45%</td><td>30%</td><td>15%</td><td>—</td></tr>
+          <tr><td><strong>设施维护保养</strong></td><td>20%</td><td><strong>25%</strong></td><td>25%</td><td>35%</td><td>40%</td></tr>
+          <tr><td>设施检测</td><td>30%</td><td>30%</td><td>30%</td><td>30%</td><td>40%</td></tr>
+          <tr><td>技术管理和培训</td><td>—</td><td>—</td><td>15%</td><td>20%</td><td>20%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--medium-gray); margin-top:8px;">
+      ※ 四级设施维护保养权重为 <strong>25%</strong>（非20%，原文核实无误）。一级设施维护保养+检测+技术管理=40%+40%+20%=100%，无缺口。
+    </p>
+  </div>
+
+  <!-- ========== 七、新增·删除·重大调整 ========== -->
+  <div class="section" id="sec7">
+    <div class="section-header">
+      <div class="section-num">七</div>
+      <div class="section-title">新增 · 删除 · 重大调整汇总</div>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card red">
+        <h4>🔴 职业编码变更</h4>
+        <p>4-07-05-04（2019版）→ 4-07-05-03（2026版）<br>依据《职业分类大典（2022版）》重新编号</p>
+      </div>
+      <div class="highlight-card red">
+        <h4>🔴 取消双职业方向</h4>
+        <p>监控操作 / 检测维修保养两个方向被取消，所有等级统一考核"设施监控操作+维护保养+检测+技术管理"四大模块</p>
+      </div>
+      <div class="highlight-card green">
+        <h4>🟢 职称直报通道</h4>
+        <p>初级职称 → 三级<br>中级职称 → 二级<br>高级职称 → 一级<br>首次打通专业技术人才评价通道</p>
+      </div>
+      <div class="highlight-card orange">
+        <h4>🟠 相关专业大幅扩展</h4>
+        <p>新增应急技术与管理、防灾减灾救灾技术、应急装备技术与工程、安全智能监测技术、智慧应急、消防救援技术、现代物业管理、安全保卫服务等10+个专业</p>
+      </div>
+      <div class="highlight-card blue">
+        <h4>🔵 通用规范体系更新</h4>
+        <p>GB 55036/55037（2022版通用规范）替代原有分散设计规范，标志消防标准体系进入"通用规范+专项规范"新阶段</p>
+      </div>
+      <div class="highlight-card green">
+        <h4>🟢 相关职业19→23</h4>
+        <p>新增安全技术防范工程技术人员、物业管理师（升级）、电力电气设备安装工（细分），相关职业认定范围扩大</p>
+      </div>
+      <div class="highlight-card orange">
+        <h4>🟠 初级工年龄明确</h4>
+        <p>2026版首次明确规定申报者须<strong>年满18周岁</strong>，取消"学徒期满"条件</p>
+      </div>
+      <div class="highlight-card blue">
+        <h4>🔵 评价配比细化</h4>
+        <p>机考监考配比 1∶30，每位考生由不少于3名考评员评分，综合评审改为3人（含）以上单数</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h3 style="font-size:16px; margin-bottom:16px; color:var(--dark-gray);">▸ 删除内容完整清单</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40px;">序号</th>
+            <th>删除项</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="cell-del">双职业方向体系（监控操作/检测维修保养）</td><td>2019版最大结构性特色被取消</td></tr>
+          <tr><td>2</td><td class="cell-del">"手指、手臂灵活，动作协调"</td><td>改为"四肢健全，具备良好的身体灵活性和动作协调性"</td></tr>
+          <tr><td>4</td><td class="cell-del">"本职业或相关职业学徒期满"</td><td>初级工申报条件中学徒制表述被删除</td></tr>
+          <tr><td>5</td><td class="cell-del">原有分散的各系统设计规范引用体系</td><td>2026版以GB 55036/55037通用规范体系替代</td></tr>
+          <tr><td>6</td><td class="cell-del">原有的"计算机基础知识"独立章节</td><td>相关内容可能融入默认基础，不再单独列出</td></tr>
+          <tr><td>7</td><td class="cell-del">低级别（五/四级）"维修"职能</td><td>监控/维护保养为主，维修技能上移至高级别</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <h3 style="font-size:16px; margin-bottom:16px; color:var(--dark-gray);">▸ 新增内容完整清单</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40px;">序号</th>
+            <th>新增项</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><strong>职称对应申报通道</strong></td><td>初级职称→三级、中级职称→二级、高级职称→一级</td></tr>
+          <tr><td>2</td><td><strong>18周岁年龄下限</strong></td><td>初级工申报须年满18周岁，首次明确</td></tr>
+          <tr><td>3</td><td><strong>应急管理与防灾减灾专业</strong></td><td>应急技术与管理、防灾减灾救灾技术、应急装备技术与工程、安全智能监测技术、智慧应急</td></tr>
+          <tr><td>4</td><td><strong>现代物业管理、安全保卫服务</strong></td><td>直接对应物业管理行业从业者</td></tr>
+          <tr><td>5</td><td><strong>GB 55036/55037通用规范</strong></td><td>2022年版通用规范取代原有分散设计规范</td></tr>
+          <tr><td>6</td><td><strong>GB/T 38315应急预案导则</strong></td><td>新增应急疏散预案编制要求</td></tr>
+          <tr><td>7</td><td><strong>GB/T 44481-2024检测技术规范</strong></td><td>升级原2008年版</td></tr>
+          <tr><td>8</td><td><strong>综合评审在多媒体教室进行</strong></td><td>明确综合评审场所要求</td></tr>
+          <tr><td>9</td><td><strong>★关键技能标注</strong></td><td>涉及安全生产的关键技能标注星号，违反操作规程则考核不合格</td></tr>
+          <tr><td>10</td><td><strong>每位考生由不少于3名考评员评分</strong></td><td>技能考核评分机制更严格</td></tr>
+          <tr><td>11</td><td><strong>技师新增：编制报废和更新计划</strong></td><td>首次引入消防设施"全生命周期"末端管理概念</td></tr>
+          <tr><td>12</td><td><strong>一级新增系统设备要求</strong></td><td>注氮控氧防火装置、油浸变压器排油注氮灭火装置、探火管式灭火装置</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== 结语 ========== -->
+  <div class="section">
+    <div class="alert-box alert-red">
+      <h4>⚠️ 特别提示</h4>
+      <p>
+        2026版实施日期为 <strong>2026年10月1日</strong>，届时2019版（4-07-05-04）将正式废止。在过渡期内，新申请鉴定的人员需关注当地鉴定站按哪个版本执行。已取得2019版证书的人员，证书仍然有效。
+      </p>
+    </div>
+    <div class="alert-box alert-blue">
+      <h4>📌 核心结论</h4>
+      <p>
+        2026版标准是对2019版的<strong>全面、系统且重大的修订</strong>：①评价体系更多元（职称通道首次打通）；②职业能力要求更综合（取消方向，全覆盖）；③知识技能结构更优化（强化实操，降低纯理论）；④规范体系全面升级（通用规范替代分散规范）；⑤管理主体更明确（国家消防救援局独立发文）。整体大幅提高了行业准入门槛和从业人员综合能力要求。
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== 页脚 ===== -->
+<div class="footer">
+  <p>《消防设施操作员》2019版 vs 2026版 · 逐条核实对比分析</p>
+  <p style="margin-top:6px;">2026版依据：人社厅发〔2026〕23号 · 2026年10月1日施行</p>
+</div>
+
+</body>
+</html>

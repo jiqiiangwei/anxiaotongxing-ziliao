@@ -245,9 +245,10 @@
 <nav class="navbar">
   <div class="brand"><img src="安消同行落地页效果预览_全屏版_images/安消同行logo.png" alt="安消同行"></div>
   <div class="nav-tools">
-    <a href="#materials" class="nav-tool-btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});return false;">🧮 工具</a>
-    <a href="#services" class="nav-tool-btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">服务</a>
-    <a href="#convert" class="nav-tool-btn" onclick="document.getElementById('convert').scrollIntoView({behavior:'smooth'});return false;">联系</a>
+    <a href="#tools" class="nav-tool-btn">🧮 灭火器计算器</a>
+    <a href="#services" class="nav-tool-btn">服务</a>
+    <a href="#materials" class="nav-tool-btn">📚 免费资料</a>
+    <a href="#convert" class="nav-tool-btn">联系</a>
   </div>
   <a href="tel:18070280307" class="nav-phone">
     <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.15 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006.29 6.29l1.46-1.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -256,46 +257,37 @@
 </nav>
 
 <!-- 封面 -->
-<div class="hero">
+<div class="hero" style="min-height:260px">
   <div class="hero-left">
-    <div class="hero-badge">🏠 企业消防实战顾问</div>
-    <h1 class="hero-title">
-      你的企业，<span class="accent">下一次消防检查</span>，<br>
-      会不会被开出整改通知？
-    </h1>
-    <p class="hero-sub">
-      <strong>17年消防实战老兵</strong>，9年第三方消防技术服务机构 +
-      8年大型物业安全管理。<br>
-      教你一套让迎检不再慌乱的自检方法。
-    </p>
-    <div class="hero-actions">
-      <a href="#convert" class="hero-cta">🎁 免费领 · 企业消防隐患自检清单 →</a>
-      <a href="#services" class="hero-cta outline">了解我能做什么</a>
-    </div>
-    <div class="hero-contact" style="margin-top:4px">
-      <div>📞 微信/电话：180 7028 0307</div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-avatar">
-      <img src="安消同行落地页效果预览_全屏版_images/个人工作照.jpg" alt="魏际强" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div style="display:none;width:100%;height:100%;background:linear-gradient(135deg,#c62828,#e53935);align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff">魏</div>
-    </div>
-    <div class="hero-name">魏际强 · 安消同行</div>
-    <div class="hero-name-sub">注册消防工程师 · 注册安全工程师</div>
-    <div class="hero-exp-row">
-      <div class="hero-exp-item">
-        <div class="hero-exp-num">9年</div>
-        <div class="hero-exp-label">第三方消防技术经验</div>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <div class="hero-badge">🏠 企业消防实战顾问</div>
+        <h1 class="hero-title" style="font-size:clamp(22px,3.5vw,34px);margin-bottom:10px">
+          你的企业，<span class="accent">下一次消防检查</span>，会不会被开出整改通知？
+        </h1>
+        <p class="hero-sub" style="font-size:14px;margin-bottom:14px">
+          <strong>17年消防实战老兵</strong>，9年第三方消防技术机构 + 8年大型物业安全管理
+        </p>
+        <div class="hero-actions" style="margin-bottom:10px">
+          <a href="#convert" class="hero-cta" style="padding:10px 20px;font-size:14px">🎁 免费领 · 企业消防隐患自检清单</a>
+          <a href="#services" class="hero-cta outline" style="padding:10px 20px;font-size:14px">了解我能做什么 →</a>
+        </div>
+        <div style="font-size:13px;color:#888">📞 180 7028 0307　　✉️ anxiaotongxing</div>
       </div>
-      <div class="hero-exp-item">
-        <div class="hero-exp-num">8年</div>
-        <div class="hero-exp-label">物业安全管理经验</div>
+      <div style="display:flex;align-items:center;gap:16px;flex-shrink:0">
+        <div class="hero-avatar" style="width:80px;height:80px">
+          <img src="安消同行落地页效果预览_全屏版_images/个人工作照.jpg" alt="魏际强" style="width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid rgba(198,40,40,0.2)" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div style="font-size:15px;font-weight:800;color:#111">魏际强 · 安消同行</div>
+          <div style="font-size:12px;color:#c62828;font-weight:600">注册消防工程师 · 注册安全工程师</div>
+          <div style="display:flex;gap:12px;margin-top:6px">
+            <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:#c62828">9年</div><div style="font-size:10px;color:#888">第三方技术</div></div>
+            <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:#c62828">8年</div><div style="font-size:10px;color:#888">物业安全</div></div>
+            <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:#c62828">300+</div><div style="font-size:10px;color:#888">服务客户</div></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero-contact">
-      <div>☎ 180 7028 0307</div>
-      <div>微信 anxiaotongxing</div>
     </div>
   </div>
 </div>
@@ -309,121 +301,8 @@
 </div>
 
 <!-- 信任背书 -->
-<!-- 个人介绍（紧凑版 ≤ 页面下半部分） -->
-<div class="section" style="padding:28px 48px;background:#fff;border-top:1px solid rgba(0,0,0,0.05)">
-  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-    <div style="flex-shrink:0">
-      <img src="安消同行落地页效果预览_全屏版_images/个人工作照.jpg" alt="魏际强"
-           style="width:68px;height:68px;border-radius:50%;border:3px solid rgba(198,40,40,0.25);object-fit:cover;display:block"
-           onerror="this.style.display='none'">
-    </div>
-    <div style="flex:1;min-width:180px">
-      <div style="font-size:16px;font-weight:800;color:#111;margin-bottom:2px">魏际强 · 安消同行</div>
-      <div style="font-size:12px;color:#c62828;font-weight:600;margin-bottom:3px">注册消防工程师 · 注册安全工程师</div>
-      <div style="font-size:12px;color:#888">9年第三方消防技术机构 · 8年大型物业安全管理</div>
-    </div>
-    <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;flex-wrap:wrap">
-      <img src="安消同行落地页效果预览_全屏版_images/一级注册消防工程师-1.jpg" alt="一级注册消防工程师证书"
-           style="height:44px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)"
-           onerror="this.style.display='none'">
-      <img src="安消同行落地页效果预览_全屏版_images/中级注册安全工程师-1.jpg" alt="中级注册安全工程师证书"
-           style="height:44px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)"
-           onerror="this.style.display='none'">
-    </div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px">
-    <div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)">
-      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">🛠️ 9年 · 第三方消防技术</div>
-      <div style="font-size:12px;color:#666;line-height:1.5">消防设施维保·维修·检测·工程施工全流程，熟悉各类系统设备性能与整改规范</div>
-    </div>
-    <div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)">
-      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">🏢 8年 · 物业多业态管理</div>
-      <div style="font-size:12px;color:#666;line-height:1.5">写字楼·商业综合体·住宅·医院·学校·产业园区·物流园·停车场·国企后勤全覆盖</div>
-    </div>
-    <div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)">
-      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">📐 能落地，不只会写文本</div>
-      <div style="font-size:12px;color:#666;line-height:1.5">隐患排查→整改闭环→迎检对接，全程陪跑，知道现场哪个环节容易出错</div>
-    </div>
-  </div>
-</div>
-<div class="section section-alt" id="services">
-  <div class="section-tag">Services</div>
-  <h2 class="section-title">可提供以下<span class="accent">专业服务</span></h2>
-  
-  <div class="divider"></div>
-
-  <div class="services-top">
-    <div class="svc-card">
-      <div class="svc-card-hd">
-        <div class="svc-num red">1</div>
-        <div class="svc-name">企业安全 / 消防顾问</div>
-      </div>
-      <div class="svc-card-body">
-        <div class="svc-tags">
-          <span class="svc-tag">长期顾问</span>
-        </div>
-        <div class="svc-desc">你的物业项目需要一个"常驻消防顾问"，但专职招聘成本高、人员流动大、不稳定。我能按项目配置，灵活周期，随叫随到。</div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">日常巡检带教，发现问题不过夜</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">迎检前专项检查，整改清单直接出</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接消防规范，不让你白跑</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">招投标技术支撑，从投标到履约全流程</div></div>
-        <div class="svc-suit">适用业态：<span>写字楼·商业综合体·住宅·产业园区·医院·学校·物流园·停车场·国企后勤</span></div>
-      </div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-card-hd">
-        <div class="svc-num yellow">2</div>
-        <div class="svc-name">安全咨询 & 安全评估</div>
-      </div>
-      <div class="svc-card-body">
-        <div class="svc-tags">
-          <span class="svc-tag blue">出具报告</span>
-        </div>
-        <div class="svc-desc">消防设施每年在维保，但你不知道到底合不合格。我能出具专业评估报告，明确告知哪个合格、哪个要改。</div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接 GB55037-2022 等现行规范</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">隐患分级评估，告诉你先改哪个后改哪个</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">白纸黑字，整改有依据，迎检有底气</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">适合：年度评估·整改前评估·迎检前自评</div></div>
-        <div class="svc-suit">适用业态：<span>所有业态均可按需出具评估报告</span></div>
-      </div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-card-hd">
-        <div class="svc-num green">3</div>
-        <div class="svc-name">消防安全培训</div>
-      </div>
-      <div class="svc-card-body">
-        <div class="svc-tags">
-          <span class="svc-tag">按业态定制</span>
-        </div>
-        <div class="svc-desc">网上资料不系统不落地。我能按业态定制课件，含现场带教，不是纯放PPT。</div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">按业态定制（物业/医院/学校/商业综合体/工厂）</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">内容涵盖：法规更新 + 现场隐患 + 应急处置</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">配套考核题库，培训有记录可查</div></div>
-        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">含现场带教 + 实操演练</div></div>
-        <div class="svc-suit">适用场景：<span>新员工入职·消防宣传月·专项演练·管理层安全意识</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="svc-more-grid">
-    <div class="svc-more-item"><span class="svc-more-num">④</span><span class="svc-more-text">风险隐患排查诊断</span></div>
-    <div class="svc-more-item"><span class="svc-more-num">⑤</span><span class="svc-more-text">消防安全管理制度编制</span></div>
-    <div class="svc-more-item"><span class="svc-more-num">⑥</span><span class="svc-more-text">应急预案编制与演练</span></div>
-    <div class="svc-more-item"><span class="svc-more-num">⑦</span><span class="svc-more-text">消防重点单位档案建立</span></div>
-    <div class="svc-more-item"><span class="svc-more-num">⑧</span><span class="svc-more-text">消防招投标技术支撑</span></div>
-    <div class="svc-more-item"><span class="svc-more-num">⑨</span><span class="svc-more-text">新改扩建消防前置咨询</span></div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════
-     计算工具板块
-═══════════════════════════════════════════════════════ -->
-<div class="tools-section" id="tools">
-  <div class="tools-header">
-    <div class="section-tag">🧮 Free Tools</div>
+<div class="section" id="tools">
+  <div class="section-tag">🧮 Free Tools</div>
     <h2 class="section-title">实用工具 · <span class="accent">免费使用</span></h2>
     <p class="section-sub">依据《建筑灭火器配置设计规范》GB 50140-2005 编制</p>
   </div>
@@ -605,67 +484,85 @@
   </div>
 </div>
 
+<!-- 客户画像 -->
+<div class="section">
+  <!-- 免费课程资料区 --><div class="section section-alt" id="materials" style="padding:48px 48px;background:#f5f6fa;border-top:1px solid rgba(0,0,0,0.05)"><div class="section-tag">📚 Free Resources</div><h2 class="section-title" style="font-size:clamp(20px,3.5vw,27px);font-weight:900;margin-bottom:6px;color:#111">课程配套 · <span style="color:#c62828">资料免费查阅</span></h2><p style="font-size:14px;color:#666;margin-bottom:20px">持续更新，点击直接查阅 · 永久有效</p><div style="width:46px;height:4px;background:linear-gradient(90deg,#c62828,#e53935);border-radius:2px;margin-bottom:24px"></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"><div style="background:#fff;border-radius:12px;padding:18px 16px;border:1px solid rgba(0,0,0,0.08);transition:all .2s" onmouseover="this.style.borderColor='rgba(198,40,40,0.25)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.07)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.transform='';this.style.boxShadow=''"><div style="font-size:14px;font-weight:700;color:#111;margin-bottom:6px;line-height:1.4">消防设施操作员新旧国标对比分析</div><div style="font-size:12px;color:#888;margin-bottom:10px;line-height:1.5">2019版 vs 2026版逐条核实完整版</div><a href="materials/消防设施操作员_2019vs2026_对比分析.html#sec7" style="font-size:13px;font-weight:700;color:#c62828;text-decoration:none">免费查阅 →</a></div><div style="background:#fafafa;border-radius:12px;padding:18px 16px;border:1px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;min-height:100px"><div style="text-align:center"><div style="font-size:26px;margin-bottom:6px">📂</div><div style="font-size:12px;color:#aaa">更多期数资料<br>持续更新中</div></div></div><div style="background:#fafafa;border-radius:12px;padding:18px 16px;border:1px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;min-height:100px"><div style="text-align:center"><div style="font-size:26px;margin-bottom:6px">📂</div><div style="font-size:12px;color:#aaa">更多期数资料<br>持续更新中</div></div></div></div><div style="margin-top:16px;text-align:center"><p style="font-size:12px;color:#bbb">资料链接均为永久有效 · 免费提供 · 请勿用于商业转载</p></div></div><div class="section-tag" id="services">Services</div>
+  <h2 class="section-title">可提供以下<span class="accent">专业服务</span></h2>
+  
+  <div class="divider"></div>
 
-<!-- 免费课程资料区 -->
-<div class="section section-alt" id="materials" style="padding:48px 48px;background:#f5f6fa;border-top:1px solid rgba(0,0,0,0.05)">
-  <div class="section-tag">📚 Free Resources</div>
-  <h2 class="section-title" style="font-size:clamp(20px,3.5vw,27px);font-weight:900;margin-bottom:6px;color:#111">
-    每期课程 · <span style="color:#c62828">免费资料</span>领取
-  </h2>
-  <p style="font-size:14px;color:#666;margin-bottom:20px">持续更新，点击即可获取 · 永久有效</p>
-  <div style="width:46px;height:4px;background:linear-gradient(90deg,#c62828,#e53935);border-radius:2px;margin-bottom:24px"></div>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px" class="mat-grid">
-    <!-- 第14期 -->
-    <div style="background:#fff;border-radius:12px;padding:18px 16px;border:1px solid rgba(0,0,0,0.08);position:relative">
-      <div style="display:inline-block;background:linear-gradient(135deg,#c62828,#e53935);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px">第14期</div>
-      <div style="font-size:14px;font-weight:700;color:#111;margin-bottom:4px">消防设施操作员新国标解读</div>
-      <div style="font-size:12px;color:#888;margin-bottom:8px;line-height:1.5">2019版 vs 2026版 · 逐条核实完整版</div>
-      <div style="font-size:12px;color:#aaa;padding:2px 8px;background:#f5f6fa;border-radius:4px;border:1px dashed rgba(0,0,0,0.12);width:fit-content">即将上线</div>
-    </div>
-    <!-- 第13期 -->
-    <div style="background:#fff;border-radius:12px;padding:18px 16px;border:1px solid rgba(0,0,0,0.08);transition:all .2s" onmouseover="this.style.borderColor='rgba(198,40,40,0.25)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.07)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.transform='';this.style.boxShadow=''">
-      <div style="display:inline-block;background:linear-gradient(135deg,#c62828,#e53935);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px">第13期</div>
-      <div style="font-size:14px;font-weight:700;color:#111;margin-bottom:4px">消防设施操作员证书使用指南</div>
-      <div style="font-size:12px;color:#888;margin-bottom:8px;line-height:1.5">证书效力·申报条件·使用范围</div>
-      <a href="#" onclick="alert('资料链接即将更新');return false" style="font-size:13px;font-weight:700;color:#c62828;text-decoration:none">免费领取 →</a>
-    </div>
-    <!-- 第12期 -->
-    <div style="background:#fff;border-radius:12px;padding:18px 16px;border:1px solid rgba(0,0,0,0.08);transition:all .2s" onmouseover="this.style.borderColor='rgba(198,40,40,0.25)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.07)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.transform='';this.style.boxShadow=''">
-      <div style="display:inline-block;background:linear-gradient(135deg,#c62828,#e53935);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px">第12期</div>
-      <div style="font-size:14px;font-weight:700;color:#111;margin-bottom:4px">火灾探测报警产品维修与屏蔽</div>
-      <div style="font-size:12px;color:#888;margin-bottom:8px;line-height:1.5">维修条件·屏蔽时限·操作规范</div>
-      <a href="#" onclick="alert('资料链接即将更新');return false" style="font-size:13px;font-weight:700;color:#c62828;text-decoration:none">免费领取 →</a>
-    </div>
-    <!-- 第7期 -->
-    <div style="background:#fff;border-radius:12px;padding:18px 16px;border:1px solid rgba(0,0,0,0.08);transition:all .2s" onmouseover="this.style.borderColor='rgba(198,40,40,0.25)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.07)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.transform='';this.style.boxShadow=''">
-      <div style="display:inline-block;background:linear-gradient(135deg,#c62828,#e53935);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:6px">第7期</div>
-      <div style="font-size:14px;font-weight:700;color:#111;margin-bottom:4px">消防控制室值班要求</div>
-      <div style="font-size:12px;color:#888;margin-bottom:8px;line-height:1.5">值班制度·应急响应·记录规范</div>
-      <a href="#" onclick="alert('资料链接即将更新');return false" style="font-size:13px;font-weight:700;color:#c62828;text-decoration:none">免费领取 →</a>
-    </div>
-    <!-- 更多期数预留位 -->
-    <div style="background:#fafafa;border-radius:12px;padding:18px 16px;border:1px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;min-height:100px">
-      <div style="text-align:center">
-        <div style="font-size:26px;margin-bottom:6px">📂</div>
-        <div style="font-size:12px;color:#aaa">更多期数资料<br>持续更新中</div>
+  <div class="services-top">
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num red">1</div>
+        <div class="svc-name">企业安全 / 消防顾问</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag">长期顾问</span>
+        </div>
+        <div class="svc-desc">你的物业项目需要一个"常驻消防顾问"，但专职招聘成本高、人员流动大、不稳定。我能按项目配置，灵活周期，随叫随到。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">日常巡检带教，发现问题不过夜</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">迎检前专项检查，整改清单直接出</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接消防规范，不让你白跑</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">招投标技术支撑，从投标到履约全流程</div></div>
+        <div class="svc-suit">适用业态：<span>写字楼·商业综合体·住宅·产业园区·医院·学校·物流园·停车场·国企后勤</span></div>
       </div>
     </div>
-    <div style="background:#fafafa;border-radius:12px;padding:18px 16px;border:1px dashed rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;min-height:100px">
-      <div style="text-align:center">
-        <div style="font-size:26px;margin-bottom:6px">📂</div>
-        <div style="font-size:12px;color:#aaa">更多期数资料<br>持续更新中</div>
+
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num yellow">2</div>
+        <div class="svc-name">安全咨询 & 安全评估</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag blue">出具报告</span>
+        </div>
+        <div class="svc-desc">消防设施每年在维保，但你不知道到底合不合格。我能出具专业评估报告，明确告知哪个合格、哪个要改。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">对接 GB55037-2022 等现行规范</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">隐患分级评估，告诉你先改哪个后改哪个</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">白纸黑字，整改有依据，迎检有底气</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">适合：年度评估·整改前评估·迎检前自评</div></div>
+        <div class="svc-suit">适用业态：<span>所有业态均可按需出具评估报告</span></div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-hd">
+        <div class="svc-num green">3</div>
+        <div class="svc-name">消防安全培训</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-tags">
+          <span class="svc-tag">按业态定制</span>
+        </div>
+        <div class="svc-desc">网上资料不系统不落地。我能按业态定制课件，含现场带教，不是纯放PPT。</div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">按业态定制（物业/医院/学校/商业综合体/工厂）</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">内容涵盖：法规更新 + 现场隐患 + 应急处置</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">配套考核题库，培训有记录可查</div></div>
+        <div class="svc-detail-item"><div class="svc-dot"></div><div class="svc-detail-text">含现场带教 + 实操演练</div></div>
+        <div class="svc-suit">适用场景：<span>新员工入职·消防宣传月·专项演练·管理层安全意识</span></div>
       </div>
     </div>
   </div>
-  <div style="margin-top:16px;text-align:center">
-    <p style="font-size:12px;color:#bbb">资料链接均为永久有效 · 免费提供 · 请勿用于商业转载</p>
+
+  <div class="svc-more-grid">
+    <div class="svc-more-item"><span class="svc-more-num">④</span><span class="svc-more-text">风险隐患排查诊断</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑤</span><span class="svc-more-text">消防安全管理制度编制</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑥</span><span class="svc-more-text">应急预案编制与演练</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑦</span><span class="svc-more-text">消防重点单位档案建立</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑧</span><span class="svc-more-text">消防招投标技术支撑</span></div>
+    <div class="svc-more-item"><span class="svc-more-num">⑨</span><span class="svc-more-text">新改扩建消防前置咨询</span></div>
   </div>
 </div>
 
-<!-- 客户画像 -->
-<div class="section">
-  <div class="section-tag">Target Clients</div>
+<!-- ═══════════════════════════════════════════════════════
+     计算工具板块
+═══════════════════════════════════════════════════════ -->
+<div class="tools-section">
+  <div class="tools-header">
+    <div class="section-tag">Target Clients</div>
   <h2 class="section-title">你的企业有<span class="accent">这样的困惑</span>吗？</h2>
   <div class="divider"></div>
 
@@ -918,3 +815,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 </script>
 </body>
 </html>
+<!-- 个人介绍（紧凑版） --><div class="section-tag">About</div><div class="section" style="padding:28px 48px;background:#fff;border-top:1px solid rgba(0,0,0,0.05)"><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><div style="flex-shrink:0"><img src="安消同行落地页效果预览_全屏版_images/个人工作照.jpg" alt="魏际强" style="width:68px;height:68px;border-radius:50%;border:3px solid rgba(198,40,40,0.25);object-fit:cover;display:block" onerror="this.style.display='none'"></div><div style="flex:1;min-width:180px"><div style="font-size:16px;font-weight:800;color:#111;margin-bottom:2px">魏际强 · 安消同行</div><div style="font-size:12px;color:#c62828;font-weight:600;margin-bottom:3px">注册消防工程师 · 注册安全工程师</div><div style="font-size:12px;color:#888">9年第三方消防技术机构 · 8年大型物业安全管理</div></div><div style="display:flex;gap:8px;align-items:center;flex-shrink:0;flex-wrap:wrap"><img src="安消同行落地页效果预览_全屏版_images/一级注册消防工程师-1.jpg" alt="一级注册消防工程师证书" style="height:44px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)" onerror="this.style.display='none'"><img src="安消同行落地页效果预览_全屏版_images/中级注册安全工程师-1.jpg" alt="中级注册安全工程师证书" style="height:44px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)" onerror="this.style.display='none'"></div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px"><div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)"><div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">🛠️ 9年 · 第三方消防技术</div><div style="font-size:12px;color:#666;line-height:1.5">消防设施维保·维修·检测·工程施工全流程，熟悉各类系统设备性能与整改规范</div></div><div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)"><div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">🏢 8年 · 物业多业态管理</div><div style="font-size:12px;color:#666;line-height:1.5">写字楼·商业综合体·住宅·医院·学校·产业园区·物流园·停车场·国企后勤全覆盖</div></div><div style="background:#f5f6fa;border-radius:10px;padding:12px 14px;border:1px solid rgba(0,0,0,0.06)"><div style="font-size:13px;font-weight:700;color:#111;margin-bottom:3px">📐 能落地，不只会写文本</div><div style="font-size:12px;color:#666;line-height:1.5">隐患排查→整改闭环→迎检对接，全程陪跑，知道现场哪个环节容易出错</div></div></div></div>
